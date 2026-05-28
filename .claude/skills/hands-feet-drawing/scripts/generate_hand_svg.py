@@ -5,13 +5,13 @@ Generate an annotated hand reference SVG with construction lines and joint label
 Usage:
     python generate_hand_svg.py --pose relaxed_open --hand right --output hand_ref.svg
 
-Poses: relaxed_open, fist, pointing, grasping, spread
+Poses: relaxed_open, fist, pointing, spread
 """
 
 import argparse
 import math
 from xml.etree.ElementTree import Element, SubElement, tostring
-from xml.dom import minidom
+from xml.etree.ElementTree import indent as et_indent
 
 HAND_JOINTS = {
     "relaxed_open": {
@@ -57,16 +57,18 @@ FINGER_CHAINS = {
 }
 
 LABELS = {
-    "wrist": "Wrist", "thumb_cmc": "CMC", "thumb_mcp": "MCP", "thumb_ip": "IP",
-    "index_mcp": "MCP", "index_pip": "PIP", "index_dip": "DIP",
-    "middle_mcp": "MCP", "middle_pip": "PIP", "middle_dip": "DIP",
-    "ring_mcp": "MCP", "ring_pip": "PIP", "ring_dip": "DIP",
-    "pinky_mcp": "MCP", "pinky_pip": "PIP", "pinky_dip": "DIP",
+    "wrist": "Wrist", "palm_center": "Palm Center",
+    "thumb_cmc": "CMC", "thumb_mcp": "MCP", "thumb_ip": "IP",
+    "index_mcp": "Index MCP", "index_pip": "PIP", "index_dip": "DIP",
+    "middle_mcp": "Middle MCP", "middle_pip": "PIP", "middle_dip": "DIP",
+    "ring_mcp": "Ring MCP", "ring_pip": "PIP", "ring_dip": "DIP",
+    "pinky_mcp": "Pinky MCP", "pinky_pip": "PIP", "pinky_dip": "DIP",
 }
 
 
 def prettify(elem):
-    return minidom.parseString(tostring(elem, "utf-8")).toprettyxml(indent="  ")
+    et_indent(elem, space="  ")
+    return tostring(elem, encoding="unicode")
 
 
 def s(parent, tag, cls=None, text=None, **attrs):
@@ -81,7 +83,7 @@ def s(parent, tag, cls=None, text=None, **attrs):
     return e
 
 
-def create_svg(joints, hand_side, view, scale=80):
+def create_svg(joints, hand_side, view, pose_name, scale=80):
     padding = 40
     svg_w = int(scale * 4.5 + padding * 2)
     svg_h = int(scale * 4 + padding * 2)
@@ -124,13 +126,15 @@ def create_svg(joints, hand_side, view, scale=80):
     wr = (wrist[0] + scale * 0.35, wrist[1])
 
     # Palm silhouette
+    nudge = scale * 0.06
+    nudge_sm = scale * 0.04
     pd = (
         f"M {th_cmc[0]},{th_cmc[1]}"
-        f" C {th_cmc[0]-5},{th_cmc[1]+5} {wl[0]},{wl[1]+5} {wl[0]},{wl[1]}"
+        f" C {th_cmc[0]-nudge},{th_cmc[1]+nudge} {wl[0]},{wl[1]+nudge} {wl[0]},{wl[1]}"
         f" L {wr[0]},{wr[1]}"
-        f" C {wr[0]},{wr[1]+5} {pk_mcp[0]+5},{pk_mcp[1]+5} {pk_mcp[0]},{pk_mcp[1]}"
+        f" C {wr[0]},{wr[1]+nudge} {pk_mcp[0]+nudge},{pk_mcp[1]+nudge} {pk_mcp[0]},{pk_mcp[1]}"
         f" L {rg_mcp[0]},{rg_mcp[1]} L {md_mcp[0]},{md_mcp[1]} L {ix_mcp[0]},{ix_mcp[1]}"
-        f" C {ix_mcp[0]-5},{ix_mcp[1]-3} {th_mcp[0]-3},{th_mcp[1]-3} {th_cmc[0]},{th_cmc[1]} Z"
+        f" C {ix_mcp[0]-nudge},{ix_mcp[1]-nudge_sm} {th_mcp[0]-nudge_sm},{th_mcp[1]-nudge_sm} {th_cmc[0]},{th_cmc[1]} Z"
     )
     s(svg, "path", "silhouette", d=pd)
 
@@ -160,14 +164,14 @@ def create_svg(joints, hand_side, view, scale=80):
 
         fp = [f"M {lp[0][0]},{lp[0][1]}"]
         for i in range(1, len(lp)):
-            mx = (lp[i][0] + lp[i + 1][0]) / 2 if i + 1 < len(lp) else lp[i][0]
-            my = (lp[i][1] + lp[i + 1][1]) / 2 if i + 1 < len(lp) else lp[i][1]
-            fp.append(f"Q {lp[i][0]},{lp[i][1]} {mx},{my}")
-        fp.append(f"Q {(lp[-1][0]+rp[-1][0])/2},{lp[-1][1]+tw} {rp[-1][0]},{rp[-1][1]}")
+            mx = (lp[i - 1][0] + lp[i][0]) / 2
+            my = (lp[i - 1][1] + lp[i][1]) / 2
+            fp.append(f"Q {mx},{my} {lp[i][0]},{lp[i][1]}")
+        fp.append(f"Q {lp[-1][0]},{lp[-1][1]+tw} {rp[-1][0]},{rp[-1][1]}")
         for i in range(len(rp) - 1, 0, -1):
             mx = (rp[i][0] + rp[i - 1][0]) / 2
             my = (rp[i][1] + rp[i - 1][1]) / 2
-            fp.append(f"Q {rp[i][0]},{rp[i][1]} {mx},{my}")
+            fp.append(f"Q {mx},{my} {rp[i - 1][0]},{rp[i - 1][1]}")
         fp.append("Z")
         s(svg, "path", "silhouette", d=" ".join(fp))
 
@@ -210,16 +214,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pose", default="relaxed_open", choices=list(HAND_JOINTS.keys()))
     ap.add_argument("--hand", default="right", choices=["left", "right"])
-    ap.add_argument("--view", default="palm", choices=["palm", "dorsal", "side"])
+    ap.add_argument("--view", default="palm")
     ap.add_argument("--output", default=None)
     args = ap.parse_args()
 
-    global pose_name
-    pose_name = args.pose
-
     out = args.output or f"{args.pose}_{args.hand}_hand.svg"
     with open(out, "w", encoding="utf-8") as f:
-        f.write(prettify(create_svg(HAND_JOINTS[args.pose], args.hand, args.view)))
+        f.write(prettify(create_svg(HAND_JOINTS[args.pose], args.hand, args.view, args.pose)))
     print(f"Hand reference saved to: {out}")
 
 
