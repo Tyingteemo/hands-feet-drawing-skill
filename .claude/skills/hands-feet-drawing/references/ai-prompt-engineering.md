@@ -1,176 +1,178 @@
-# AI Prompt Engineering for Hands & Feet
+# AI Prompt Engineering — Manga Loli Style (~14yo)
 
 ## Table of Contents
-1. Why AI Struggles with Hands & Feet
-2. Universal Prompt Additions (Model-Agnostic)
-3. Midjourney Specific
-4. Stable Diffusion / Flux Specific
-5. DALL-E 3 Specific
-6. ComfyUI / Workflow Guidance
-7. Incremental Refinement Strategy
+1. Why Anime AI Struggles with Young Hands
+2. Universal Manga Positive Prompt Additions
+3. Universal Manga Negative Prompt Additions
+4. NovelAI / NAI Diffusion Specific
+5. NijiJourney Specific
+6. Stable Diffusion Anime Models (Anything-v5, AOM3, Meina, Counterfeit)
+7. ComfyUI / Workflow Guidance
+8. DALL-E 3 Specific
+9. Incremental Refinement for Anime Hands
 
 ---
 
-## 1. Why AI Struggles with Hands & Feet
+## 1. Why Anime AI Struggles with Young Hands
 
-**Hands:** 27 bones in a small area with enormous pose variation (each finger has 4 degrees of freedom, the thumb has 5). The pose space is so large that the training data is sparse for any specific configuration. The model sees many configurations but not enough of any single one, leading to statistical averaging — the classic "extra fingers" as the model guesses multiple finger configurations simultaneously.
-
-**Feet:** Less photographed at high resolution from multiple angles compared to faces and hands. The subtleties of arch variation, toe alignment, and ankle anatomy are underrepresented in training data.
-
-**Self-occlusion:** Hands especially occlude their own parts (fingers behind other fingers, thumb behind the palm), creating ambiguous edge cases that the model resolves poorly.
+- **Training data bias:** Most anime training images show adult-proportioned hands (shounen/seinen). Young/small hands are underrepresented.
+- **Manga simplification:** Real hands have 27 bones with distinct joints. Manga hands have ~3-5 visible features. AI gets confused about which features to include vs omit.
+- **The "adult hand" problem:** AI defaults to rendering adult-knuckled, veiny hands on characters intended to be 14. The model doesn't understand "age" in hand anatomy.
+- **Finger count errors:** Same root cause as realistic — statistical averaging of multiple configurations. Extra bad in anime because training data includes chibi hands (3-4 fingers), stylized hands, and simplified hands mixed together.
 
 ---
 
-## 2. Universal Prompt Additions (Model-Agnostic)
+## 2. Universal Manga Positive Prompt Additions
 
-### Always Include in Positive Prompts
-
+### Always Include:
+```text
+soft delicate hands, youthful hands, slender tapered fingers, small oval nails, smooth skin, no visible knuckles, no veins, cute hands, manga style hands, anime hands
 ```
-[anatomically correct hands and feet, natural hand pose, clearly defined knuckles and fingernails, five fingers on each hand, natural finger proportions, visible foot arch, correct toe anatomy, natural joint definition]
+
+### 14yo-Specific:
+```text
+young hands, teenage girl hands, soft knuckle definition, rounded fingertips, small neat nails, delicate fingers, kawaii hands
 ```
 
-### Pose-Specific Additions
+### Pose-Specific (Manga):
 
 | Pose | Prompt Addition |
 |------|----------------|
-| Relaxed hand | [relaxed open hand, fingers gently curved, natural finger spacing] |
-| Fist | [closed fist, fingers curled into palm, knuckles visible] |
-| Pointing | [pointing finger, index finger extended, other fingers curled naturally] |
-| Grasping object | [hand grasping [object], fingers wrapped around [object], natural grip] |
-| Standing foot | [foot standing flat on ground, visible medial arch, natural toe splay] |
-| Walking | [foot in mid-stride, dynamic pose, natural toe-off position] |
+| Peace sign | [peace sign hand pose, two fingers raised, soft rounded fingers, kawaii gesture] |
+| Heart finger | [heart shape made with thumb and index finger, cute hand gesture, idol pose] |
+| Relaxed open | [relaxed open hand, palm facing viewer, soft rounded palm, delicate fingers] |
+| Holding cup | [hands gently holding cup, soft grip, slender fingers wrapped around cup] |
+| Pointing | [pointing with index finger, soft rounded fingertip, cute pointing pose] |
 
-### Universal Negative Prompt Additions
+---
 
-Copy-paste these into the negative prompt:
+## 3. Universal Manga Negative Prompt Additions
 
 ```text
-extra fingers, fused fingers, missing fingers, fewer than five fingers, six fingers, deformed hands, bad anatomy, extra limbs, mutated hands, poorly drawn hands, extra digits, fewer digits, malformed hands, long fingers, webbed fingers, conjoined fingers, extra toes, missing toes, deformed feet, bad foot anatomy, mutated feet, extra limbs, missing limbs, distorted hands, claw hand, mitten hand, floating limbs, disembodied limbs, bad proportions, disjointed anatomy, impossible anatomy
+adult hands, bony hands, veiny hands, old hands, wrinkled hands, masculine hands, large hands, thick fingers, prominent knuckles, sharp knuckles, defined tendons, realistic hands, muscular hands, rough skin, thick nails, long fingernails, dirty nails, claw hands, extra fingers, fused fingers, six fingers, deformed hands, bad anatomy, mutated hands
 ```
 
 ---
 
-## 3. Midjourney Specific
+## 4. NovelAI / NAI Diffusion Specific
 
-### Parameters
+### Model: NAI Diffusion V3 / V4
 
-- `--no extra fingers, deformed hands, bad anatomy, extra limbs` (append to any prompt that includes hands)
-- `--style raw` — reduces artistic exaggeration, produces more literal/anatomical renderings
-- `--iw 2` — when using a reference image that has good hands (image weight)
-- `--cref <URL>` — character reference to maintain consistent hand proportions across generations
+**Best practices:**
+- Use the quality tag set: `masterpiece, best quality, amazing quality`
+- Add `detailed hands` for better finger rendering
+- The model responds well to Danbooru-style tags
 
-### Prompt Structure
-
+**Positive prompt template:**
 ```
-[subject/scene], [pose description], anatomically correct hands, natural hand pose, five fingers --ar 3:2 --style raw --no extra fingers, deformed hands, bad anatomy
+masterpiece, best quality, 1girl, [age:14], [scene description], [pose],
+soft hands, delicate fingers, kawaii hands, small nails, smooth skin,
+anatomically correct hands, five fingers, cute hands
 ```
 
-### Midjourney Version Notes
+**Negative prompt template:**
+```
+lowres, bad anatomy, bad hands, extra fingers, fused fingers, missing fingers,
+bony hands, adult hands, veiny hands, realistic, photorealistic, 3d,
+wrinkled skin, thick fingers, prominent knuckles
+```
 
-- **V6 / V6.1:** Significantly improved hand rendering. Explicit finger counts still help. `--style raw` reduces hand errors.
-- **V7:** Further improvements. The `--no` parameter continues to be effective.
-- **General rule:** When Midjourney gets hands wrong, first try: regenerating with `--style raw` and the negative prompt. If still bad, add more explicit hand description to the positive prompt.
-
-### Character Reference
-
-Use `--cref` with an image that has correctly-drawn hands. This improves hand consistency and reduces the random variation in hand anatomy across generations.
+**UC (Undesired Content) preset:**
+- NovelAI has built-in "Bad Anatomy" UC presets — always enable these
+- Consider adding a custom UC embedding for hands if generating many character images
 
 ---
 
-## 4. Stable Diffusion / Flux Specific
+## 5. NijiJourney Specific
 
-### Negative Prompt Embed
+### Model: Niji 6
 
-Include the full universal negative prompt in the negative prompt field. For SDXL, consider using a dedicated negative TEXT encoder or embedding for "bad hands."
+**Best practices:**
+- `--niji 6` has excellent anime hand rendering compared to v5
+- `--style cute` produces softer, more youthful features
+- `--style expressive` for dynamic gestures (peace signs, heart poses)
 
-### Dedicated LoRAs
+**Prompt template:**
+```
+[character description], [pose], soft delicate hands, youthful hands,
+five fingers, small cute nails, anime style --niji 6 --style cute
+--no adult hands, bony hands, realistic hands, extra fingers, deformed hands
+```
 
-Several community LoRAs specifically improve hand rendering:
-- **"Perfect Hands" / "Hand Improvement"** LoRAs — train the model to produce better hand anatomy
-- Apply at weights between 0.6-0.8 (higher weights may introduce artifacts)
-
-### ControlNet
-
-The most reliable way to fix hands in Stable Diffusion:
-
-| ControlNet Type | How It Helps |
-|----------------|-------------|
-| **OpenPose** | Use a reference image with a similar hand pose. OpenPose will detect the skeleton and enforce a similar hand configuration. |
-| **Depth** | Provide a depth map of the hand pose. Ensures correct spatial relationships between fingers. |
-| **IP-Adapter** | Use a reference hand image for compositional guidance. |
-
-### Inpainting Workflow
-
-When hands come out wrong in an otherwise good image:
-
-1. Mask just the hand region (leave a small margin around the hand)
-2. Set denoising strength to 0.75-0.85 (high enough to fix structure, low enough to match the rest)
-3. Use a focused prompt for the inpainting: `[anatomically correct right/left hand, [pose description], natural fingers]`
-4. Use strong negative prompt for the inpaint region
-5. Run 2-3 passes until the hand looks correct
-
-### Regional Prompting (For Couple / Regional Prompter extension)
-
-If using extensions like "For Couple" or "Regional Prompter":
-
-- Assign a dedicated prompt region to each hand
-- Prompt the region with: `[hand, [pose], [view], anatomically correct hand, five fingers]`
-- This prevents the model from "borrowing" features from the main prompt
-
-### Flux Specific
-
-- Flux has better native hand rendering than SDXL
-- Still benefits from explicit finger counts and pose descriptions
-- Negative prompting works differently in Flux — use natural language negatives rather than embedded negative prompts
-- Example: "The hands should have five fingers, not six. The fingers should not be fused or deformed."
+**Character reference:**
+- `--cref <URL>` with a reference character that has good hands improves hand consistency dramatically
 
 ---
 
-## 5. DALL-E 3 Specific
+## 6. Stable Diffusion Anime Models
 
-### Strengths
+### Supported models: Anything-v5, AOM3 (AbyssOrangeMix3), MeinaMix, Counterfeit
 
-- DALL-E 3 has the best native hand rendering of all major models
-- Typically gets finger counts correct without explicit prompting
-- Better at rendering hand-object interactions
-
-### Still Beneficial
-
+**Universal SD anime positive:**
 ```
-Anatomically correct hands with exactly five fingers each, clearly defined knuckles and fingernails, natural hand pose
+1girl, young, [age:14], [scene], [pose], masterpiece, best quality,
+soft delicate hands, youthful hands, slender fingers, small oval nails,
+anatomically correct hands, five fingers, cute hands, smooth skin
 ```
 
-### When Hands Go Wrong
+**Universal SD anime negative:**
+```
+(worst quality, low quality:1.4), adult hands, bony hands, veiny hands,
+prominent knuckles, sharp knuckles, thick fingers, muscular hands,
+(bad anatomy:1.2), (bad hands:1.3), extra fingers, fused fingers,
+missing fingers, deformed hands, realistic, photorealistic
+```
 
-- Regenerate with more explicit hand description (unlike SD, DALL-E's inpainting has different behavior and may not help)
-- Try requesting a "close-up" view of the hand area if the full composition has hand issues
-- Break the pose into simpler components
+### Recommended LoRAs:
+- **"Better Hands" / "Perfect Hands" LoRA** — general hand improvement
+- **"Kawaii Hands" LoRA** — specifically for soft, youthful hands (CivitAI)
+- Apply at 0.5–0.7 weight (lower than adult hand LoRAs to avoid over-correction)
+
+### ControlNet for anime hands:
+- **OpenPose** with a reference image of a young character with good hand pose
+- **Depth** control for hand-object interaction (holding cups, phones)
+- **IP-Adapter** with a reference hand image for style consistency
+
+### Inpainting (if hands go wrong):
+1. Mask hand region
+2. Denoising: 0.65–0.75 (lower than realistic — anime hands are simpler)
+3. Focused prompt: `soft youthful hand, [pose], delicate fingers, five fingers`
+4. 2–3 passes
 
 ---
 
-## 6. ComfyUI / Workflow Guidance
+## 7. ComfyUI / Workflow Guidance
 
-- **Node-based approach:** Always include a "CLIP Text Encode" node for negative prompt with the full negative terms
-- **For hands:** Chain a hand-improvement LoRA node before the KSampler
-- **ControlNet workflow:** Use OpenPose + hand reference image as a preprocessor → ControlNet → KSampler chain
-- **Face and hands refinement:** Use separate KSampler passes for face and hands with lower denoising
+- **Node setup:** SDXL/SD3 anime checkpoint → Hand Improvement LoRA → KSampler
+- **For hands specifically:** Add a "Detailer" node (like SEGS Detailer) focused on hand regions
+- **Negative embedding:** Use `bad-hands-5` or similar negative embedding
+- **Face + hands refinement:** Two-pass workflow — generate full image, then hand-detail pass with higher CFG
 
 ---
 
-## 7. Incremental Refinement Strategy
+## 8. DALL-E 3 Specific
+
+- DALL-E 3 has good native hand rendering but tends toward realistic proportions
+- Explicitly request "anime style, soft youthful hands, delicate fingers"
+- If hands look too adult, add "cute young hands, kawaii style, simplified anime hands"
+- DALL-E inpainting is limited — better to regenerate with more explicit prompt
+
+---
+
+## 9. Incremental Refinement for Anime Hands
 
 ```
-First pass:  Basic prompt with "anatomically correct hands, five fingers"
-↓ (check results)
-Second pass: Add negative prompt + pose-specific description
-↓ (check results)
-Third pass:  Add ControlNet / LoRA + focus on problem hand
-↓ (check results)
-Fourth pass: Inpaint / regenerate problem hand region with focused prompt
+Pass 1: Basic prompt + "soft hands, five fingers, anime style"
+↓ (check: are hands youthful or adult-looking?)
+Pass 2: Add "youthful hands, no knuckles, delicate fingers" + negative "adult hands"
+↓ (check: finger count correct? no extra/missing?)
+Pass 3: Add LoRA / ControlNet + pose-specific description
+↓ (check: style consistent with overall image?)
+Pass 4: Inpaint problem areas with focused hand prompt
 ↓
-If still failing: Generate hands separately and composite, or use a reference image
+If still failing: Generate hands separately as reference, then composite
 ```
 
-### Key Principle
+### Key Principle for Anime
 
-> The more explicit you are about hand and foot anatomy, the fewer errors the AI will make. "Natural hands" is not enough — specify finger count, pose, joint visibility, and anatomical correctness.
+> In realistic art, MORE detail = better hands. In anime, LESS detail = better hands. The AI needs to be told explicitly NOT to render adult anatomical features. "No knuckles, no veins, no tendons" is as important as "five fingers."
