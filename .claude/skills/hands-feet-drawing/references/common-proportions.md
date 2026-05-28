@@ -1,137 +1,114 @@
-# Common Proportions
+# Common Proportions — Manga Loli Style (~14yo)
 
 ## Table of Contents
-1. Head-to-Hand Relationships
-2. Internal Hand Proportions
-3. Foot-to-Body Relationships
-4. Age-Based Changes
-5. Sex-Based Differences
-6. Measurement System (Heads Method)
+1. Manga Body Proportions (14yo girl)
+2. Hand Proportions
+3. Foot Proportions
+4. Age Comparisons (manga styles)
+5. Measurement System (Heads Method, manga variant)
 
 ---
 
-## 1. Head-to-Hand Relationships
+## 1. Manga Body Proportions (14yo Girl)
 
-| Relationship | Ratio |
-|-------------|-------|
-| Hand length (wrist crease to middle fingertip) | ≈ face height (chin to hairline) |
-| Hand length | ≈ 3/4 head height |
-| Hand width | ≈ 1/3 face width |
-| Palm covers | ≈ entire face area when spread open |
+| Body Part | 14yo Manga Girl (5.5–6 head-body) | Adult Female (7–8 head-body) |
+|-----------|-----------------------------------|------------------------------|
+| Total height | 5.5–6 heads | 7–8 heads |
+| Shoulder width | ~1.3 heads | ~1.5 heads |
+| Hip width | ~1.4 heads | ~1.5 heads |
+| Leg length (hip to floor) | ~3.2 heads | ~4 heads |
+| Arm length (shoulder to wrist) | ~2.5 heads | ~3 heads |
+| Hand length | ~3/4 head | ~3/4 head |
+| Foot length | ~0.85 head | ~1 head |
+| Head size relative to body | Larger | Standard |
+
+**Key insight:** At 14yo, the head is proportionally larger relative to the body. Hands and feet are ABSOLUTELY the same size as an adult relative to the head, but the body is 1–1.5 heads shorter. This means hands look slightly larger relative to the torso/limbs — which is characteristic of the "loli" aesthetic.
 
 ---
 
-## 2. Internal Hand Proportions
+## 2. Hand Proportions
 
-### Finger Length Cascade (relaxed extension)
+### Internal Hand Proportions
+
+| Landmark | Ratio | Notes |
+|----------|-------|-------|
+| Hand length (wrist to MF tip) | = face height (chin to hairline) | Same as adult |
+| Palm width (across MCP) | ~0.55 × hand length | Slightly narrower than adult (0.6) |
+| Palmar thumb length (CMC to tip) | ~0.5 × hand length | Same as adult |
+| Index finger | ~93% of MF | Same |
+| Ring finger | ~90% of MF | Same |
+| Pinky finger | ~75% of MF | Same |
+| Finger base width | ~0.12 × scale (vs 0.14 adult) | 15% thinner |
+| Finger tip width | ~0.06 × scale (vs 0.07 adult) | 15% thinner |
+
+### Finger Segment Ratios
+
+| Segment | 14yo | Adult |
+|---------|------|-------|
+| Proximal phalanx | 1.0 | 1.0 |
+| Middle phalanx | 0.85 | 0.85 |
+| Distal phalanx | 0.65 | 0.67 |
+
+The distal phalanx is slightly shorter in younger hands — the fingertip feels more "pinched."
+
+---
+
+## 3. Foot Proportions
+
+| Landmark | 14yo | Adult |
+|----------|------|-------|
+| Foot length | ~0.85 head | ~1 head |
+| Foot width (at ball) | ~0.27 head | ~0.33 head |
+| Arch height | ~0.12 × foot length | ~0.25 × foot length |
+| Big toe length | ~1/4 of foot | Same |
+| Toe spread angle | ~12° (narrower) | ~15° |
+
+### Toe Cascade (14yo Manga)
 
 ```
-Middle finger: 100% (reference)
-Ring finger:   ~95%
-Index finger:  ~93%
-Pinky finger:  ~75%
-Thumb (to IP): ~60%
+Big toe:    100% (ref)
+2nd toe:    88%
+3rd toe:    76%
+4th toe:    65%
+5th toe:    54%
 ```
 
-### Segment Lengths (relative to proximal phalanx = 1.0)
-
-| Segment | Ratio |
-|---------|-------|
-| Proximal phalanx | 1.0 |
-| Middle phalanx | ~0.85 |
-| Distal phalanx | ~0.67 |
-
-### Palm Proportions
-
-- Palm length (wrist crease to MCP of middle finger) ≈ palm width (across MCP joints)
-- The middle finger MCP sits at roughly the midpoint of the total hand length
-- The thumb tip (when adducted along the palm) reaches to approximately the middle of the index finger's proximal phalanx
-
-### Finger Landmarks
-
-| Landmark | Position |
-|----------|----------|
-| Index fingertip | Reaches to the middle of the middle finger's distal phalanx |
-| Ring fingertip | Reaches just below the middle finger's DIP crease |
-| Pinky fingertip | Reaches to the ring finger's DIP crease |
-| Thumb tip (adducted) | Middle of index finger's proximal phalanx |
+The cascade is slightly more compressed than adult — toes feel closer together and more uniform.
 
 ---
 
-## 3. Foot-to-Body Relationships
+## 4. Age Comparisons (Manga Styles)
 
-| Relationship | Ratio |
-|-------------|-------|
-| Foot length | ~15% of total height (1/6.6) |
-| Foot length | ≈ forearm length (elbow to wrist) |
-| Foot width (at ball) | ~1/3 of foot length |
-| Foot height (at arch) | ~1/4 of foot length |
-| Inward forefoot angle | ~10-15° medial deviation from heel axis |
-
-### Foot Landmarks
-
-- The big toe is approximately the same width as the 2nd and 3rd toes combined
-- The ankle (medial malleolus) is roughly at the level of the foot's highest point
-- The heel is approximately 1/4 of the total foot length
+| Age/Body Type | Head Ratio | Hand Feel | Key Traits |
+|---------------|-----------|-----------|------------|
+| Chibi (SD) | 2–3 heads | Tiny, no detail, mitten-like | Rounded stubs, no joints, no nails |
+| Loli (8–12) | 4–5 heads | Small, very round, no knuckles | Soft cylinders, tiny dots for nails |
+| **14yo (this skill)** | **5.5–6 heads** | **Slender, soft, subtle MCP** | **Tapered ovals, small oval nails** |
+| Teen (16–17) | 6–7 heads | Adult-like but still soft | Defined MCP, faint PIP creases |
+| Adult female | 7–8 heads | Full joint definition | All creases, visible tendons |
 
 ---
 
-## 4. Age-Based Changes
+## 5. Measurement System (Heads Method, Manga Variant)
 
-| Age | Hand Characteristics | Foot Characteristics |
-|-----|---------------------|---------------------|
-| Newborn | Very chubby, no visible joints, fingers are short tapered cones, palm is thick and padded | Very chubby, toes appear short and splayed, no visible arch (fat pad obscures it) |
-| Toddler (1-3) | Fingers lengthen relative to palm, soft joint definition begins, thumb pad still very thick | Fat pad still obscures the arch (many toddlers appear flat-footed — normal) |
-| Child (5-10) | Fingers clearly defined, knuckles visible but soft, proportions approach adult pattern | Arch becomes visible, toes lengthen, still more subcutaneous fat than adult |
-| Adolescent (12-18) | Hands may appear disproportionately large (reach adult size before body), joints become defined, angular quality emerges | Feet often the first body part to reach adult size — shoes outgrow faster than height |
-| Adult | Full joint definition, proportional | Full arch, clear tendon/bone definition |
-| Elderly | Thinner soft tissue, enlarged joints (Heberden's nodes), more prominent veins and tendons | Thinner fat pads (especially heel), more prominent metatarsal heads, nails may thicken |
+This is the standard manga artist's proportion grid:
 
----
+| Body Part | 14yo Manga | Adult |
+|-----------|-----------|-------|
+| Hand length | 3/4 head | 3/4 head |
+| Hand width | 1/4 head | 1/4 head |
+| Foot length | 5/6 head (~0.85) | 1 head |
+| Foot width | 1/4 head | 1/3 head |
+| Forearm length | 0.9 head | 1 head |
+| Upper arm | 1.2 heads | 1.3 heads |
+| Full height | 5.5–6 heads | 7.5–8 heads |
 
-## 5. Sex-Based Differences
+### Quick Reference: Hand on Face (Manga Test)
 
-### Hand Differences
-
-| Feature | Male | Female |
-|---------|------|--------|
-| Palm width | Broader | Narrower |
-| Finger shape | Thicker, more rectangular | More tapered, slender |
-| Knuckles | More prominent, angular | Softer, less defined |
-| Vein/tendon visibility | More visible | Less visible (more subcutaneous fat) |
-| Index-to-ring ratio | Ring often longer (2D:4D ratio) | Index and ring often closer in length |
-
-### Foot Differences
-
-| Feature | Male | Female |
-|---------|------|--------|
-| Overall size | Larger | Smaller (avg ~2 sizes smaller) |
-| Arch height | Similar | Often slightly higher |
-| Heel width | Broader | Narrower |
-| Toe shape | Often more splayed | Often more tapered (due to footwear) |
-| 1st metatarsal angle | Less acute | More acute (higher bunion prevalence) |
-
----
-
-## 6. Measurement System (Heads Method)
-
-The traditional artist's proportion system, using the head as a unit:
-
-| Body Part | Heads Unit |
-|-----------|-----------|
-| Hand length | ~3/4 head |
-| Hand width | ~1/4 head |
-| Foot length | ~1 head |
-| Foot width | ~1/3 head |
-| Forearm length | ~1 head |
-| Upper arm length | ~1.3 heads |
-| Full figure height | 7.5-8 heads (idealized) |
-
-### Quick Reference: Hand on Face
-
-The hand is roughly the same size as the face:
-- Palm = forehead to chin
+Place the character's open hand over their face:
+- Palm should approximately cover from chin to hairline
 - Middle finger = nose height
-- Thumb tip to pinky tip (spread) = face width
+- Spread hand = face width
+- If the hand looks MUCH larger or smaller: adjust.
 
-This is a useful visual check when proportions feel off.
+This test works for ALL ages — it's the body/torso proportions that change, not the hand-to-face ratio.
