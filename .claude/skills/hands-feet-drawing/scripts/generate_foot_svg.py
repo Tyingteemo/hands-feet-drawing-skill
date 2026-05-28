@@ -11,7 +11,7 @@ Poses: standing, walking, dangling, tiptoe
 import argparse
 import math
 from xml.etree.ElementTree import Element, SubElement, tostring
-from xml.dom import minidom
+from xml.etree.ElementTree import indent as et_indent
 
 FOOT_JOINTS = {
     "standing": {
@@ -60,7 +60,8 @@ LABELS = {
 
 
 def prettify(elem):
-    return minidom.parseString(tostring(elem, "utf-8")).toprettyxml(indent="  ")
+    et_indent(elem, space="  ")
+    return tostring(elem, encoding="unicode")
 
 
 def s(parent, tag, cls=None, **attrs):
@@ -72,7 +73,7 @@ def s(parent, tag, cls=None, **attrs):
     return e
 
 
-def create_svg(joints, foot_side, view, scale=80):
+def create_svg(joints, foot_side, view, pose_name, scale=80):
     padding = 40
     svg_w = int(scale * 4 + padding * 2)
     svg_h = int(scale * 3.5 + padding * 2)
@@ -124,13 +125,17 @@ def create_svg(joints, foot_side, view, scale=80):
     for i in range(1, len(dors_pts)):
         mx = (dors_pts[i - 1][0] + dors_pts[i][0]) / 2
         my = (dors_pts[i - 1][1] + dors_pts[i][1]) / 2
-        dp.append(f"Q {dors_pts[i][0]},{dors_pts[i][1]} {mx},{my}")
+        dp.append(f"Q {mx},{my} {dors_pts[i][0]},{dors_pts[i][1]}")
 
-    # Toe tips
+    # Toe tips arc: bt -> toe2 -> toe3 -> toe4 -> toe5
+    prev = bt
     for tip_name in ["toe2_tip", "toe3_tip", "toe4_tip", "toe5_tip"]:
         if tip_name in joints:
             pt = tx(joints[tip_name])
-            dp.append(f"Q {(bt[0]+pt[0])/2},{bt[1]} {pt[0]},{pt[1]}")
+            mx = (prev[0] + pt[0]) / 2
+            my = max(prev[1], pt[1]) + scale * 0.02
+            dp.append(f"Q {mx},{my} {pt[0]},{pt[1]}")
+            prev = pt
 
     # Sole curve back to heel
     sole_mid = ((t5[0] + hp[0]) / 2, t5[1] + scale * 0.04)
@@ -184,16 +189,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pose", default="standing", choices=list(FOOT_JOINTS.keys()))
     ap.add_argument("--foot", default="right", choices=["left", "right"])
-    ap.add_argument("--view", default="medial", choices=["medial", "lateral", "dorsal", "plantar"])
+    ap.add_argument("--view", default="medial")
     ap.add_argument("--output", default=None)
     args = ap.parse_args()
 
-    global pose_name
-    pose_name = args.pose
-
     out = args.output or f"{args.pose}_{args.foot}_foot.svg"
     with open(out, "w", encoding="utf-8") as f:
-        f.write(prettify(create_svg(FOOT_JOINTS[args.pose], args.foot, args.view)))
+        f.write(prettify(create_svg(FOOT_JOINTS[args.pose], args.foot, args.view, args.pose)))
     print(f"Foot reference saved to: {out}")
 
 
