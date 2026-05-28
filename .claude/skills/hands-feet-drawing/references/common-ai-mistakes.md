@@ -1,227 +1,160 @@
-# Common AI Mistakes — Hands & Feet
+# Common AI Mistakes — Manga Loli Style (~14yo)
 
-A diagnostic catalog of common failures in AI-generated hands and feet, with causes and fixes.
+Diagnostic catalog of common AI failures when generating anime-style hands/feet for young characters.
 
 ## Table of Contents
-1. Hand Mistakes
-2. Foot Mistakes
-3. General Diagnostic Approach
+1. Manga-Specific Hand Mistakes
+2. Manga-Specific Foot Mistakes
+3. Anime AI Diagnostic Checklist
 
 ---
 
-## 1. Hand Mistakes
+## 1. Manga-Specific Hand Mistakes
 
-### 1.1 Extra Fingers (Polydactyly)
+### 1.1 Adult Hands on Young Characters (AGE MISMATCH)
 
-**Appearance:** 6, 7, or more fingers on one hand.
+**Appearance:** Character has a youthful face but adult-proportioned hands with visible knuckles, angular bones, thick fingers, or prominent nails.
 
-**Root cause:** The diffusion model averages multiple plausible finger configurations simultaneously. It "hedges its bets" by including partial features from multiple configurations, resulting in extra digits.
-
-**Fix:**
-- Positive prompt: "exactly five fingers on each hand, anatomically correct hand"
-- Negative prompt: "extra fingers, six fingers, seven fingers, polydactyly"
-- Use ControlNet with OpenPose skeleton reference
-- For SD: use a hand-improvement LoRA
-
-### 1.2 Fused / Webbed Fingers (Syndactyly)
-
-**Appearance:** Two or more fingers merge into a single mass with no clear separation.
-
-**Root cause:** The model fails to resolve interdigital boundaries at the chosen resolution. Common when the hand occupies a small area of the image.
+**Root cause:** Anime AI models are primarily trained on adult character art (shounen/seinen). The model defaults to adult hand proportions unless explicitly told otherwise.
 
 **Fix:**
-- Positive prompt: "fingers clearly separated, natural finger spacing, visible gaps between fingers"
-- Negative prompt: "fused fingers, webbed fingers, conjoined fingers"
-- Increase image resolution or zoom in on hands
-- For SD: inpaint the hand region at higher denoising strength
+- Positive: "young hands, soft delicate hands, youthful hands, no knuckles, smooth skin"
+- Negative: "adult hands, bony hands, veiny hands, prominent knuckles"
+- For SD: use a "kawaii hands" or "soft hands" LoRA
 
-### 1.3 Wrong Number of Joints
+### 1.2 Bony/Knobby Fingers
 
-**Appearance:** A finger shows 4+ visible joints, or the thumb has 3 joints.
+**Appearance:** MCP knuckles are sharp bumps, fingers have visible PIP/DIP joints, extensor tendons visible as ridges.
 
-**Root cause:** The model doesn't "know" that fingers have a fixed number of joints. It renders creases and folds as joints.
-
-**Fix:**
-- Positive prompt: "anatomically correct finger joints, thumb with two joints, fingers with three joints each"
-- Use a reference image with similar hand pose
-
-### 1.4 Backward / Impossible Knuckles
-
-**Appearance:** Knuckles bend in the wrong direction (fingers bending backward past straight, or hyperextension past anatomical limits).
-
-**Root cause:** The model fails to learn joint directionality constraints. This is especially common in dynamic poses.
+**Root cause:** Model renders realistic hand anatomy instead of manga simplification.
 
 **Fix:**
-- Describe joint direction explicitly: "fingers bending naturally forward, knuckles visible on the back of the hand"
-- Negative prompt: "hyperextended fingers, backward bending fingers"
-- Use a reference image for pose guidance
+- Positive: "soft rounded fingers, no visible knuckles, smooth hands, simplified anime hands"
+- Negative: "knuckles, joints, tendons, realistic hands, bony fingers"
 
-### 1.5 Thumb on Wrong Side / Missing Thumb
+### 1.3 Male/Adult Finger Proportions
 
-**Appearance:** Thumb appears on the pinky side of the hand (mirrored), or the hand has no visible thumb.
+**Appearance:** Fingers too thick, square tips, wide nails, bulky palm.
 
-**Root cause:** The model confuses left and right hands, or the hand is in an ambiguous orientation.
-
-**Fix:**
-- Specify: "right hand" or "left hand" explicitly
-- "thumb on the radial (inner) side of the hand, visible thumb"
-- For close-up hand shots, always specify the hand laterality
-
-### 1.6 All Fingers Same Length
-
-**Appearance:** Fingers look like a row of identical sausages with no length variation.
-
-**Root cause:** The model averages finger lengths to a common value.
+**Root cause:** The model doesn't distinguish male vs female hand proportions well.
 
 **Fix:**
-- Positive prompt: "naturally varying finger lengths, middle finger longest, index and ring slightly shorter, pinky shortest"
-- Reference proportion: middle > ring > index > pinky > thumb
+- Positive: "slender fingers, delicate hands, feminine hands, small cute hands, tapered fingers, rounded fingertips"
+- Negative: "thick fingers, masculine hands, large hands, square nails"
 
-### 1.7 Mitten Hand (No Individual Finger Definition)
+### 1.4 Veins/Too Much Detail
 
-**Appearance:** The hand looks like a mitten — a rounded mass with no clear finger separation.
+**Appearance:** Dorsal veins, deep palmar creases, knuckle wrinkles visible.
 
-**Root cause:** The hand is too small in the image frame for the model to resolve individual digits.
-
-**Fix:**
-- Zoom in on the hand area (closer framing)
-- Increase output resolution
-- Use region-specific prompting (high-res focus on hands)
-- For SD: use SD upscale or tile-based generation
-
-### 1.8 Disembodied / Floating Hand
-
-**Appearance:** A hand that has no visible connection to an arm or body.
-
-**Root cause:** The hand is at the edge of the image or occluded by other elements.
+**Root cause:** Model adds realistic detail that conflicts with anime style.
 
 **Fix:**
-- "hand connected to wrist and forearm, visible arm"
-- Adjust composition so the wrist is visible
-- Negative prompt: "floating hand, disembodied hand"
+- Positive: "smooth skin, soft skin, simple anime hands, clean line art"
+- Negative: "veins, wrinkles, detailed hands, realistic skin texture, pores"
 
-### 1.9 Claw Hand
+### 1.5 Wrong Nail Style
 
-**Appearance:** Fingers are curled into an extreme, painful-looking claw shape.
+**Appearance:** Square adult nails, long pointed nails, nails at very fingertip edge, no nail gloss.
 
-**Root cause:** The model produces exaggerated flexion without understanding anatomical range of motion.
-
-**Fix:**
-- "relaxed hand pose, natural finger curvature, comfortable hand position"
-- Describe the specific pose in detail rather than leaving it to the model
-- Negative prompt: "claw hand, deformed hand, cramped hand"
-
-### 1.10 Invisible or Missing Fingers
-
-**Appearance:** Fewer than 5 fingers visible (not due to occlusion, but because the model omitted them).
-
-**Root cause:** The model treats fingers as optional detail rather than counting them.
+**Root cause:** AI doesn't know manga nail conventions.
 
 **Fix:**
-- "five fingers visible, all five fingers clearly shown"
-- Negative prompt: "missing fingers, fewer than five fingers"
+- Positive: "small oval nails, cute nails, subtle nail gloss, nails set back from fingertip"
+- Negative: "long nails, square nails, thick nails, claw nails, french tips"
+
+### 1.6 Extra Fingers in Complex Poses
+
+**Appearance:** 6+ fingers appear, especially in peace signs, heart fingers, or interlocked hands.
+
+**Root cause:** Manga hand poses with overlapping fingers create ambiguity for the model.
+
+**Fix:**
+- Positive: "exactly five fingers, clear finger separation, [specific finger count per hand]"
+- Negative: "extra fingers, six fingers, fused fingers"
+- For peace sign: explicitly state "two fingers raised, three fingers curled"
+- For heart: "thumb and index touching, three fingers relaxed behind"
+
+### 1.7 "Mitten" Hands (No Finger Separation)
+
+**Appearance:** Hand looks like a rounded blob, finger gaps not rendered.
+
+**Root cause:** Hand is too small in image, or the model doesn't distinguish manga finger gaps from the simplified style.
+
+**Fix:**
+- Positive: "clearly separated fingers, visible finger gaps, defined fingers"
+- Zoom in or increase hand prominence in composition
+- Negative: "mitten hands, fused fingers"
+
+### 1.8 Wrong Hand Age for Chibi/Loli
+
+**Appearance:** Chibi character (3-4 heads) but hands have defined fingers with nails and joints — should be simplified stubs.
+
+**Root cause:** Same hand anatomy applied regardless of character body proportion.
+
+**Fix:**
+- For chibi: "chibi hands, simplified hands, small round hands, no finger details"
+- For 14yo specifically: "youthful hands, soft knuckle definition, delicate fingers"
 
 ---
 
-## 2. Foot Mistakes
+## 2. Manga-Specific Foot Mistakes
 
-### 2.1 Extra / Missing Toes
+### 2.1 Adult Foot Size
 
-**Appearance:** 6+ toes or fewer than 5 on one foot.
+**Appearance:** Feet too large relative to character's body; foot length exceeds head length.
 
-**Root cause:** Same as hand polydactyly — the model averages toe configurations.
-
-**Fix:**
-- "five toes on each foot, anatomically correct foot"
-- Negative prompt: "extra toes, six toes, missing toes"
-
-### 2.2 Flat Foot (No Arch)
-
-**Appearance:** The foot has a flat, paddle-like silhouette with no visible arch.
-
-**Root cause:** The model doesn't distinguish medial vs. lateral foot contour, or the foot is in a non-medial view.
+**Root cause:** AI defaults to adult 7-8 head-body foot proportions.
 
 **Fix:**
-- If the view should show the arch: "visible medial foot arch, anatomically correct foot structure"
-- "inner side of foot showing natural arch curve"
+- "small feet, cute small feet, delicate feet, young feet"
+- "foot proportionally smaller than adult"
+- For 14yo: foot = ~0.85 head (not 1 head like adult)
 
-### 2.3 All Toes Same Length
+### 2.2 Overly Defined Ankle Bones
 
-**Appearance:** All five toes appear the same length.
+**Appearance:** Sharp medial and lateral malleoli, both clearly visible bumps.
 
-**Root cause:** The model averages toe lengths instead of applying the natural cascade.
-
-**Fix:**
-- "naturally varying toe lengths, big toe longest, toes tapering toward pinky"
-- Note: Egyptian foot (1 > 2 > 3 > 4 > 5) is the most common pattern
-
-### 2.4 Impossible Ankle Angle
-
-**Appearance:** The foot is bent at 90+ degrees laterally (sideways) from the leg, which is anatomically impossible.
-
-**Root cause:** The model doesn't understand that the ankle is a hinge joint (dorsiflexion/plantarflexion only).
+**Root cause:** Realistic ankle rendering.
 
 **Fix:**
-- "ankle at natural angle, foot aligned with leg direction"
-- Describe the ankle orientation explicitly
-- Negative prompt: "twisted ankle, impossible ankle angle"
+- "soft ankles, smooth ankle contour, cute ankles"
+- Negative: "bony ankles, sharp ankle bones, protruding ankle bones"
 
-### 2.5 Mitten Foot
+### 2.3 Adult Foot Arch
 
-**Appearance:** The foot has no visible toe separation — looks like a block or stump.
+**Appearance:** High, pronounced medial arch visible in side view.
 
-**Root cause:** Low resolution or poor training data for foot detail.
-
-**Fix:**
-- "clearly defined toes, individual toes visible"
-- Zoom in or increase resolution
-
-### 2.6 One Malleolus
-
-**Appearance:** Only one ankle bump is visible when both should be.
-
-**Root cause:** The model renders the ankle as a single generic bump rather than two distinct structures.
+**Root cause:** Model renders adult foot structure.
 
 **Fix:**
-- "visible inner and outer ankle bones (medial and lateral malleoli), inner ankle higher than outer ankle"
-- This is especially important in 3/4 and frontal views where both malleoli should be visible
+- "soft foot arch, gentle arch, cute feet"
+- Negative: "high arch, defined foot arch"
 
-### 2.7 Inverted Foot
+### 2.4 Toe Detail Overload
 
-**Appearance:** The foot appears to be attached to the wrong leg (left foot on right leg, or vice versa), or the medial/lateral anatomy is swapped.
+**Appearance:** Individual toe joints, knuckle creases, toenail cuticles visible.
 
-**Root cause:** The model confuses foot orientation.
+**Root cause:** Model adding unnecessary detail.
 
 **Fix:**
-- Specify: "right foot, lateral view" or "left foot, medial view"
-- "foot in correct anatomical orientation"
+- "simple toes, soft rounded toes, cute toes, minimal toe detail"
+- Negative: "toe knuckles, toe joints, detailed toes"
 
 ---
 
-## 3. General Diagnostic Approach
+## 3. Anime AI Diagnostic Checklist
 
-When a user says "the hands/feet look wrong but I'm not sure what's wrong," apply this systematic approach:
+When diagnosing manga hand/foot issues, ask:
 
-### Step 1: Count
-
-Count fingers/toes. Are there exactly 5? Is the thumb present? Are all visible joints correct?
-
-### Step 2: Check Proportions
-
-Are the fingers in the correct length cascade? Are the toes graded? Is the palm/arch proportioned correctly?
-
-### Step 3: Check Anatomy
-
-Are the joints in the right locations and directions? Is the thumb opposing correctly? Are the ankle malleoli at different heights?
-
-### Step 4: Check Pose
-
-Does the pose look natural? Are the fingers following the object they're holding? Is the weight distribution correct for standing feet?
-
-### Step 5: Check Connection
-
-Is the hand connected to a wrist? Is the foot connected to an ankle? Are the transitions smooth?
-
-### Step 6: Determine Fix
-
-Based on the error type, apply the corresponding fix from this catalog. For AI-generated images: add specific positive/negative prompt terms. For code-drawn hands: adjust joint coordinates and construction method.
+| # | Check | Good (14yo Manga) | Bad (Too Adult) |
+|---|-------|-------------------|-----------------|
+| 1 | Knuckles visible? | None or very subtle MCP | Sharp MCP + PIP + DIP |
+| 2 | Finger thickness? | Slender, < adult by ~15% | Adult width or thicker |
+| 3 | Nail style? | Small ovals, set back from tip | Square, at fingertip edge |
+| 4 | Palm creases? | 0–1 faint line | 3 deep lines |
+| 5 | Dorsal detail? | Smooth, no tendons/veins | Tendon ridges, veins |
+| 6 | Finger count? | Exactly 5, clearly separated | 6+ fingers or mitten hand |
+| 7 | Foot vs head? | Foot < head length | Foot ≥ head length |
+| 8 | Arch height? | Gentle, ~half adult | High, pronounced |
+| 9 | Ankle bones? | Smooth contour, subtle bump | Sharp double bumps |
+| 10 | Toe style? | Rounded beans, no joints | Individual knuckles visible |
