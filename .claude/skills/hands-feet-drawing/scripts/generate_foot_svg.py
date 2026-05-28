@@ -9,7 +9,6 @@ Poses: standing, walking, dangling, tiptoe
 """
 
 import argparse
-import math
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.etree.ElementTree import indent as et_indent
 
@@ -17,14 +16,14 @@ FOOT_JOINTS = {
     "standing": {
         "heel_posterior": (0.0, 0.0), "calcaneus_top": (0.3, 0.7), "talus_ankle": (0.7, 1.1),
         "medial_malleolus": (0.65, 1.3), "navicular": (1.0, 0.8), "cuneiform": (1.3, 0.6),
-        "mt1_base": (1.5, 0.4), "mt1_head": (1.8, 0.1), "mt5_head": (1.6, 0.0),
+        "mt1_base": (1.5, 0.4), "mt1_head": (1.8, 0.1), "mt5_head": (1.6, 0.1),
         "big_toe_mcp": (2.0, 0.15), "big_toe_ip": (2.2, 0.25), "big_toe_tip": (2.4, 0.3),
         "toe2_tip": (2.35, 0.25), "toe3_tip": (2.25, 0.2), "toe4_tip": (2.15, 0.15), "toe5_tip": (2.05, 0.1),
     },
     "walking": {
         "heel_posterior": (0.0, 0.1), "calcaneus_top": (0.3, 0.8), "talus_ankle": (0.7, 1.2),
         "medial_malleolus": (0.65, 1.4), "navicular": (1.0, 0.9), "cuneiform": (1.3, 0.7),
-        "mt1_base": (1.5, 0.5), "mt1_head": (1.8, 0.2), "mt5_head": (1.6, 0.1),
+        "mt1_base": (1.5, 0.5), "mt1_head": (1.8, 0.2), "mt5_head": (1.6, 0.2),
         "big_toe_mcp": (2.0, 0.25), "big_toe_ip": (2.2, 0.35), "big_toe_tip": (2.4, 0.4),
         "toe2_tip": (2.35, 0.35), "toe3_tip": (2.25, 0.3), "toe4_tip": (2.15, 0.25), "toe5_tip": (2.05, 0.2),
     },
