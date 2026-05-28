@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1 5 5" width="500" height="500">
+  <defs>
+    <style>
+      .bone-line { stroke: #888; stroke-width: 0.02; fill: none; }
+      .bone-fill { fill: #ddd; stroke: #999; stroke-width: 0.008; }
+      .joint-marker { fill: #e74c3c; }
+      .label { font-family: sans-serif; font-size: 0.06px; fill: #555; }
+      .title { font-family: sans-serif; font-size: 0.1px; font-weight: bold; fill: #333; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="-2" y="-1" width="5" height="5" fill="#fafafa" rx="0.05"/>
+
+  <text x="-1.8" y="-0.85" class="title">Hand Skeleton Template</text>
+
+  <!-- Wrist/Carpals -->
+  <ellipse cx="0" cy="-0.1" rx="0.4" ry="0.25" class="bone-fill"/>
+  <text x="-0.35" y="-0.05" class="label">Carpals (8)</text>
+
+  <!-- Metacarpals -->
+  <!-- Thumb metacarpal (rotated) -->
+  <line x1="-0.3" y1="0.0" x2="-0.6" y2="0.2" class="bone-line" stroke-width="0.03"/>
+  <text x="-0.75" y="0.25" class="label">MC1</text>
+
+  <line x1="-0.15" y1="0.0" x2="-0.25" y2="0.35" class="bone-line" stroke-width="0.03"/>
+  <text x="-0.35" y="0.35" class="label">MC2</text>
+
+  <line x1="0.0" y1="0.05" x2="0.0" y2="0.4" class="bone-line" stroke-width="0.03"/>
+  <text x="0.02" y="0.45" class="label">MC3</text>
+
+  <line x1="0.15" y1="0.0" x2="0.25" y2="0.35" class="bone-line" stroke-width="0.03"/>
+  <text x="0.25" y="0.35" class="label">MC4</text>
+
+  <line x1="0.3" y1="-0.05" x2="0.45" y2="0.25" class="bone-line" stroke-width="0.03"/>
+  <text x="0.45" y="0.25" class="label">MC5</text>
+
+  <!-- MCP joints -->
+  <circle cx="-0.6" cy="0.2" r="0.03" class="joint-marker"/>
+  <circle cx="-0.25" cy="0.35" r="0.03" class="joint-marker"/>
+  <circle cx="0.0" cy="0.4" r="0.03" class="joint-marker"/>
+  <circle cx="0.25" cy="0.35" r="0.03" class="joint-marker"/>
+  <circle cx="0.45" cy="0.25" r="0.03" class="joint-marker"/>
+
+  <!-- MCP arc callout -->
+  <path d="M -0.55,0.27 Q -0.25,0.42 0.0,0.45 Q 0.25,0.42 0.45,0.32" fill="none" stroke="#e67e22" stroke-width="0.01" stroke-dasharray="0.02,0.01"/>
+  <text x="-0.35" y="0.52" class="label" fill="#e67e22" font-size="0.05px">MCP Arc</text>
+
+  <!-- Fingers (Phalanges) -->
+  <!-- Thumb: proximal + distal -->
+  <line x1="-0.6" y1="0.2" x2="-0.55" y2="0.45" class="bone-line" stroke-width="0.025"/>
+  <line x1="-0.55" y1="0.45" x2="-0.45" y2="0.65" class="bone-line" stroke-width="0.02"/>
+  <circle cx="-0.55" cy="0.45" r="0.025" class="joint-marker"/>
+  <text x="-0.75" y="0.55" class="label">Thumb (2)</text>
+
+  <!-- Index: prox + mid + distal -->
+  <line x1="-0.25" y1="0.35" x2="-0.2" y2="0.65" class="bone-line" stroke-width="0.025"/>
+  <line x1="-0.2" y1="0.65" x2="-0.15" y2="0.9" class="bone-line" stroke-width="0.02"/>
+  <line x1="-0.15" y1="0.9" x2="-0.12" y2="1.1" class="bone-line" stroke-width="0.015"/>
+  <circle cx="-0.2" cy="0.65" r="0.02" class="joint-marker"/>
+  <circle cx="-0.15" cy="0.9" r="0.02" class="joint-marker"/>
+  <text x="-0.35" y="1.15" class="label">Index (3)</text>
+
+  <!-- Middle: prox + mid + distal -->
+  <line x1="0.0" y1="0.4" x2="0.0" y2="0.7" class="bone-line" stroke-width="0.025"/>
+  <line x1="0.0" y1="0.7" x2="0.0" y2="0.95" class="bone-line" stroke-width="0.02"/>
+  <line x1="0.0" y1="0.95" x2="0.0" y2="1.15" class="bone-line" stroke-width="0.015"/>
+  <circle cx="0.0" cy="0.7" r="0.02" class="joint-marker"/>
+  <circle cx="0.0" cy="0.95" r="0.02" class="joint-marker"/>
+  <text x="0.02" y="1.2" class="label">Middle (3)</text>
+
+  <!-- Ring: prox + mid + distal -->
+  <line x1="0.25" y1="0.35" x2="0.2" y2="0.65" class="bone-line" stroke-width="0.025"/>
+  <line x1="0.2" y1="0.65" x2="0.15" y2="0.9" class="bone-line" stroke-width="0.02"/>
+  <line x1="0.15" y1="0.9" x2="0.12" y2="1.05" class="bone-line" stroke-width="0.015"/>
+  <circle cx="0.2" cy="0.65" r="0.02" class="joint-marker"/>
+  <circle cx="0.15" cy="0.9" r="0.02" class="joint-marker"/>
+  <text x="0.1" y="1.15" class="label">Ring (3)</text>
+
+  <!-- Pinky: prox + mid + distal -->
+  <line x1="0.45" y1="0.25" x2="0.4" y2="0.5" class="bone-line" stroke-width="0.02"/>
+  <line x1="0.4" y1="0.5" x2="0.35" y2="0.7" class="bone-line" stroke-width="0.015"/>
+  <line x1="0.35" y1="0.7" x2="0.3" y2="0.85" class="bone-line" stroke-width="0.01"/>
+  <circle cx="0.4" cy="0.5" r="0.02" class="joint-marker"/>
+  <circle cx="0.35" cy="0.7" r="0.015" class="joint-marker"/>
+  <text x="0.35" y="0.9" class="label">Pinky (3)</text>
+
+  <!-- Count summary -->
+  <text x="-1.8" y="3.5" class="label" font-size="0.05px">
+    Total: 27 bones (8 carpals + 5 metacarpals + 14 phalanges)
+  </text>
+  <text x="-1.8" y="3.6" class="label" font-size="0.05px">
+    Each finger (2-5): 3 phalanges | Thumb: 2 phalanges
+  </text>
+</svg>
