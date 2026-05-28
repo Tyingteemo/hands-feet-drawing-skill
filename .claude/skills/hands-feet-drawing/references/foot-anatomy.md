@@ -1,188 +1,127 @@
-# Foot Anatomy Reference
+# Foot Anatomy — Manga Loli Style (~14yo)
 
 ## Table of Contents
-1. Osteology (Bones)
-2. The Three Arches
-3. Ankle Joint
-4. Soft Tissue & Surface Landmarks
-5. Toe Alignment & Variants
-6. Weight Distribution & Ground Contact
+1. Manga vs Realism: Key Differences
+2. Bone Structure (Simplified)
+3. The Three Arches (14yo)
+4. Ankle (Manga Rendering)
+5. Soft Tissue & Surface
+6. Toe Alignment & Rendering
+7. Measurement Landmarks
 
 ---
 
-## 1. Osteology
+## 1. Manga vs Realism: Key Differences
 
-### Tarsals (7 bones)
-
-**Hindfoot:**
-- **Calcaneus** — the heel bone. Largest tarsal. The posterior calcaneal tuberosity is the weight-bearing point of the heel. The Achilles tendon inserts on its posterior surface.
-- **Talus** — sits on top of the calcaneus. Articulates with the tibia and fibula at the ankle joint (talocrural joint). Has a head, neck, and body. The head of the talus is palpable just anterior to the ankle.
-
-**Midfoot:**
-- **Navicular** — boat-shaped; sits anterior to the talus head. The navicular tuberosity is palpable on the medial side of the midfoot (about halfway between ankle and big toe base).
-- **Cuboid** — cube-shaped; on the lateral side of the midfoot. Articulates with the 4th and 5th metatarsals.
-- **Medial cuneiform** — wedge-shaped; articulates with the 1st metatarsal
-- **Intermediate cuneiform** — smallest cuneiform; articulates with the 2nd metatarsal
-- **Lateral cuneiform** — articulates with the 3rd metatarsal
-
-**Drawing note:** Like the carpals of the hand, the tarsals (except the calcaneus and talus) form a compact mass. Treat the midfoot as a blocky mass.
-
-### Metatarsals (5 bones)
-
-- Numbered 1 (big toe) to 5 (little toe)
-- **1st metatarsal** is the thickest and shortest — it bears the most weight
-- **2nd metatarsal** is the longest
-- **5th metatarsal** has a prominent tuberosity (styloid process) at its base — palpable on the lateral side of the midfoot
-- The metatarsal heads form the "ball" of the foot
-
-**Drawing note:** The metatarsals fan out from the midfoot, with the 1st and 5th heads being the widest apart. The 2nd metatarsal head is the most prominent (longest).
-
-### Phalanges (14 bones)
-
-| Toe | Proximal | Middle | Distal |
-|-----|----------|--------|--------|
-| Big toe (1) | Yes | No | Yes |
-| 2nd | Yes | Yes | Yes |
-| 3rd | Yes | Yes | Yes |
-| 4th | Yes | Yes | Yes |
-| 5th | Yes | Yes | Yes (often fused with middle) |
-
-**Note:** The 5th toe's middle and distal phalanges are frequently fused in adults (a normal variant).
+| Feature | Realistic Adult | 14yo Manga Girl |
+|---------|----------------|-----------------|
+| Arch height | Pronounced | Gentle, subtle |
+| Ankle bones | Sharp, distinct | Soft, barely visible |
+| Toe joints | Distinct knuckles | Rounded, smooth |
+| Dorsal tendons | Visible ridges | Not shown |
+| Achilles tendon | Prominent cord | Barely a contour |
+| Heel | Angular, bony | Small, round |
+| Toenails | Wide, defined | Tiny, minimal |
+| Sole creases | Multiple lines | Often omitted |
+| Overall feel | Structural, weight-bearing | Cute, delicate, "kawaii" |
 
 ---
 
-## 2. The Three Arches
+## 2. Bone Structure (Simplified)
 
-### Medial Longitudinal Arch (the main visible arch)
+### Knowledge (not drawn):
+- 26 bones: 7 tarsals, 5 metatarsals, 14 phalanges
+- Big toe = 2 phalanges; toes 2–5 = 3 each
+- Calcaneus (heel) is the largest tarsal
+- Talus sits between calcaneus and ankle fork
 
-- **Components:** Calcaneus → talus → navicular → cuneiforms → 1st-3rd metatarsals
-- **Height:** The highest of the three arches
-- **Visibility:** Visible from the medial (inner) side as the instep curve
-- **Variants:**
-  - **Normal arch:** A gentle upward curve on the inner foot
-  - **Pes cavus (high arch):** Exaggerated arch, more weight on heel and metatarsal heads
-  - **Pes planus (flat foot):** Reduced or absent arch, the medial foot contacts the ground
+### Manga rendering:
+- The foot is a soft shoe-like shape from the side
+- Three-part simplification: heel wedge + midfoot block + toe box
+- No individual bone or joint details visible in finished manga art
+- The medial arch is shown as a subtle upward curve on the inner side
+
+---
+
+## 3. The Three Arches (14yo)
+
+### Medial Longitudinal Arch
+- **Adult:** Pronounced upward curve, clearly visible from medial view
+- **14yo:** Much gentler curve. Often looks almost flat — this is NORMAL for young feet. Don't exaggerate the arch.
 
 ### Lateral Longitudinal Arch
-
-- **Components:** Calcaneus → cuboid → 4th-5th metatarsals
-- **Height:** Much lower than the medial arch; the lateral foot sits closer to the ground
-- **Visibility:** Barely visible from the lateral (outer) side
-- **Drawing implication:** The lateral side of the foot has NO visible arch — it contacts or nearly contacts the ground
+- Already subtle in adults. In 14yo manga, the lateral side of the foot is nearly straight from heel to toe.
 
 ### Transverse Arch
+- Across the metatarsal heads. In manga: a very soft dome when viewed from the front. The ball of the foot is round, not angular.
 
-- **Components:** Runs across the metatarsal heads from medial to lateral
-- **Highest point:** At the 2nd metatarsal head
-- **Shape:** A gentle dome across the ball of the foot
-- **Drawing implication:** The ball of the foot is NOT flat — when viewed from the front, it shows a subtle curve
-
-**Drawing rule of thumb:**
-
-> The medial side of the foot has a visible arch. The lateral side does NOT. From a medial view, the foot looks like an arch. From a lateral view, it looks like a wedge.
+**Drawing rule:** When rendering the medial side of a young foot, the arch curve should be about HALF the height you'd draw for an adult. If you're unsure, err on the side of flatter — it reads as younger.
 
 ---
 
-## 3. Ankle Joint
+## 4. Ankle (Manga Rendering)
 
-### Talocrural Joint (the ankle proper)
-
-- A mortise-and-tenon joint. The tibia and fibula form a fork ("mortise") that grips the talus ("tenon").
-- **Motion:** Dorsiflexion (toes up, ~20°) and plantarflexion (pointing toes, ~50°). NO lateral rotation — the ankle is a hinge joint.
-
-### Malleoli (the ankle bumps)
-
-| Structure | Location | Key Drawing Rule |
-|-----------|----------|------------------|
-| **Medial malleolus** (tibia) | Inner ankle | Higher, more anterior, more prominent |
-| **Lateral malleolus** (fibula) | Outer ankle | Lower, more posterior, extends further down |
-
-**Critical drawing rule:** The two malleoli are NEVER at the same height. The lateral malleolus is always visibly lower (about 1 cm) and more posterior. This asymmetry is one of the most common drawing errors.
-
-### Ligaments
-
-- **Medial (deltoid) ligament:** Strong, triangular, fan-shaped. Runs from medial malleolus to talus, navicular, and calcaneus.
-- **Lateral ligaments:** Three distinct bands (anterior talofibular, calcaneofibular, posterior talofibular). The anterior talofibular is the most commonly sprained.
+- **Medial malleolus (inner ankle):** A subtle bump, NOT a sharp point. Shown as a gentle outward curve.
+- **Lateral malleolus (outer ankle):** Even more subtle. Often omitted entirely in side views.
+- **Height rule:** Medial is slightly higher (~3–5mm). Both sit above the ankle joint center.
+- **Manga shortcut:** Draw the ankle as a smooth cylinder transition from leg to foot. Add one small circle/bump for the inner ankle if needed. No double-bump detail.
 
 ---
 
-## 4. Soft Tissue & Surface Landmarks
+## 5. Soft Tissue & Surface
 
 ### Dorsal (Top of Foot)
-
-- **Extensor tendons:** Visible as ridges when toes are extended. The extensor hallucis longus tendon (big toe) is the most prominent.
-- **Dorsal venous arch:** Visible through the skin, especially in thin individuals
-- **Metatarsal heads:** Subtle rounded prominences at the ball of the foot
+- Smooth, no visible tendons or veins
+- A single gentle curve from ankle to toe knuckles
+- The metatarsal heads create a very subtle rounded curve at the "instep" — visible but soft
 
 ### Plantar (Sole)
-
-- **Heel fat pad:** A thick, specialized pad that cushions the calcaneus. It is dense and fibroelastic.
-- **Metatarsal fat pads:** Beneath the metatarsal heads, especially the 1st and 5th
-- **Arch area:** Relatively thin soft tissue; the bones of the midfoot are palpable
-- **Skin:** The thickest skin on the body; no hair follicles
+- Three soft fat pads: heel, ball (1st MT head area), and under little toe (5th MT)
+- These are round and plump, not compressed and flat
+- In manga, the sole is rarely shown in detail. When drawn: simple rounded heel + ball pads + one soft arch line
 
 ### Achilles Tendon
-
-- The thickest and strongest tendon in the body
-- Connects the calf muscles (gastrocnemius, soleus) to the posterior calcaneus
-- Stands visibly clear of the ankle joint — there is a visible gap between the tendon and the ankle
-- **Drawing rule:** The Achilles tendon should be visible as a distinct cord, not merged into the leg contour
+- In 14yo characters: barely visible
+- The back of the ankle is a smooth curve from calf to heel
+- If your style requires it: draw as a very faint, short line (not the full-length adult cord)
 
 ### Toenails
-
-- Similar structure to fingernails but generally:
-  - Flatter and wider, especially on the big toe
-  - The big toenail is roughly as wide as it is long
-  - Smaller toes have small, narrow nails that follow the toe shape
-- The nail plate is embedded in a nail fold — visible as a thin groove
+- Tiny, delicate, oval/almond
+- Big toenail is the only one typically shown clearly
+- Smaller toes: nails are dots or not drawn at all
+- Position: set back from toe tip, not at the edge
 
 ---
 
-## 5. Toe Alignment & Variants
+## 6. Toe Alignment & Rendering
 
-### Normal Alignment
+### Toe Cascade
+- Big > 2 > 3 > 4 > 5 (Egyptian pattern, ~50% of population)
+- Morton's foot variant (2 > 1 > 3 > 4 > 5): also acceptable
+- In manga, the cascade should look natural — avoid all toes being the same length
 
-- The big toe points straight forward (parallel to the foot's long axis)
-- Toes 2-5 progress from slight lateral angulation to more noticeable angulation
-- The 5th toe often curves slightly inward (varus) — a normal variant
+### Toe Shape
+- Each toe is a plump, rounded oval — like a small bean
+- Tips are soft and round, never pointy
+- The 5th toe is the smallest, often slightly curled inward (normal)
+- In 3/4 and front views, toes fan out gently — not splayed, not parallel
 
-### Length Variants
-
-| Foot Type | Toe Length Order | Prevalence |
-|-----------|-----------------|------------|
-| **Egyptian foot** (classical) | 1 > 2 > 3 > 4 > 5 | ~50% |
-| **Greek foot** (Morton's foot) | 2 > 1 > 3 > 4 > 5 | ~30% |
-| **Square foot** (Roman foot) | 1 ≈ 2 > 3 > 4 > 5 | ~20% |
-
-**Drawing implication:** There is no single "correct" toe length pattern. Egyptian is the most common, but Greek and square are normal variants. Tailor to the character's reference if specified.
-
-### Common Deformities
-
-- **Hallux valgus (bunion):** The big toe angles toward the 2nd toe, and the 1st metatarsal head becomes prominent medially
-- **Hammer toe:** The PIP joint is permanently flexed, creating an elevated (hammer-shaped) toe
-- **Overlapping toes:** One toe sits on top of an adjacent toe (most commonly the 5th overlapping the 4th)
+### Manga Shortcuts
+- In shoes: only the toe tips or nail polish are shown
+- In sandals: show 2–3 toes prominently, the rest suggested
+- In barefoot: all 5 toes visible but rendered simply, with minimal joint detail
 
 ---
 
-## 6. Weight Distribution & Ground Contact
+## 7. Measurement Landmarks
 
-### Standing (bipedal stance)
+| Measurement | 14yo Manga Girl | Adult (for comparison) |
+|-------------|-----------------|----------------------|
+| Foot length | ~14% of height (1/7) | ~15% of height (1/6.6) |
+| Foot width (ball) | ~1/3.3 of foot length | ~1/3 of foot length |
+| Arch height (medial) | ~1/2 of adult height | ~1/4 of foot length |
+| Big toe length | ~1/4 of foot length | ~1/4 of foot length |
+| Heel width | Narrower, rounder | Broader |
+| Toe box width | Slightly narrower relative to heel | Slightly wider |
 
-- **Weight distributed across:** Heel (posterior calcaneal tuberosity) + all 5 metatarsal heads
-- **Pressure distribution:** ~60% heel, ~40% forefoot
-- The tripod (calcaneus, 1st MT head, 5th MT head) forms the primary weight-bearing base
-
-### Walking (gait cycle)
-
-1. **Heel strike:** Calcaneus contacts ground first, foot slightly supinated
-2. **Midstance:** Foot flattens, weight transfers along the lateral border to the metatarsal heads
-3. **Toe-off:** Weight transfers medially to the 1st metatarsal head and big toe, which push off
-
-**Drawing note:** During toe-off, the big toe is the LAST part of the foot to leave the ground. The foot "rocks" forward like a wheel.
-
-### Non-weight-bearing (sitting, dangling)
-
-- The arch is less pronounced (the foot is not being compressed)
-- The toes are relaxed and slightly curled
-- The foot tends to angle outward naturally (external rotation)
-- The ankle is slightly plantarflexed
+**Key proportion check:** The foot of a 14yo manga girl should be about 85–90% the size of the same character's adult version. It retains the same basic ratios but everything is slightly softer and rounder.
