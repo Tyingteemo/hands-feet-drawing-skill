@@ -171,15 +171,17 @@ def create_svg(joints, foot_side, view, pose_name, scale=80):
         if lbl:
             s(svg, "text", "label", x=str(x + 6), y=str(y + 3)).text = lbl
 
-    # Callouts
+    # Callouts — label offset direction depends on foot side
+    lx = 8 if foot_side == "left" else -8   # label x offset
+    lx_big = 15 if foot_side == "left" else -15
     if arch_pts:
         mid_a = arch_pts[len(arch_pts) // 2]
-        s(svg, "text", "callout", x=str(mid_a[0] - 25), y=str(mid_a[1] - 10)).text = "Medial Arch"
+        s(svg, "text", "callout", x=str(mid_a[0] + lx_big), y=str(mid_a[1] - 10)).text = "Medial Arch"
     if pose_name == "standing":
         s(svg, "text", "callout", x=str(hp[0]), y=str(hp[1] + 18)).text = "Heel"
-        s(svg, "text", "callout", x=str(m1[0] - 8), y=str(m1[1] + 18)).text = "Ball"
+        s(svg, "text", "callout", x=str(m1[0] + lx), y=str(m1[1] + 18)).text = "Ball"
     mm = tx(joints["medial_malleolus"])
-    s(svg, "text", "callout", x=str(mm[0] - 15), y=str(mm[1] - 10)).text = "Inner ankle (higher)"
+    s(svg, "text", "callout", x=str(mm[0] + lx_big), y=str(mm[1] - 10)).text = "Inner ankle (higher)"
 
     return svg
 
