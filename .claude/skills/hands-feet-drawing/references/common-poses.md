@@ -1,231 +1,202 @@
-# Common Poses — Hand & Foot
+# Common Poses — Manga Loli Style (~14yo)
 
 ## Table of Contents
-1. Hand Poses
-2. Foot Poses
+1. Manga Hand Poses
+2. Foot Poses (Manga)
+
+**Left vs Right:** All descriptions are for the right hand/foot. Mirror x-axis for left. Anatomy is bilaterally symmetrical.
 
 ---
 
-## 1. Hand Poses
+## 1. Manga Hand Poses
 
-**Left vs Right:** All pose joint descriptions below describe the **right hand**. For the left hand, mirror the x-axis — the thumb is on the right side instead of the left, and the pinky is on the left side instead of the right. The joint structure (arc, cascade, angles) is identical.
+### Relaxed Open Hand (palm forward)
 
-### Relaxed Open Hand (palm facing viewer)
+**Style:** The character is showing their palm — common in "ta-da!" or "look!" expressions.
 
 **Description:**
-- All five fingers extended but gently curved — NOT ramrod straight
-- Thumb slightly abducted (about 30° from the index finger)
-- MCP joints form a subtle downward arc (middle knuckle highest)
-- PIP and DIP creases visible
-- Interdigital webbing visible as gentle curves between fingers
-- The natural resting curve of the palm creates a slight cup
+- Fingers gently curved, never ramrod-straight
+- Thumb abducted ~25° (less than adult ~30°)
+- MCP arc is very soft — almost flat
+- PIP/DIP creases: none visible
+- One faint palmar crease across mid-palm (optional)
+- Nails: tiny ovals near but NOT at fingertip
 
-**Joint positions (right hand, palm forward):**
-```
-MCP arc: Index slightly elevated, Middle highest, Ring slightly lower, Pinky lowest
-Fingers: Gentle flexion at PIP (~10-15°) and DIP (~5-10°)
-Thumb: Abducted ~30°, slight IP flexion
-```
+**Key manga points:**
+- Fingers should look like tapered mochi — soft, plump, narrowing to a rounded point
+- Palm is a smooth rounded pentagon, no thenar/hypothenar definition
+- Web spaces are smooth arcs, no sharp V cuts
 
 **Common errors:**
-- Fingers perfectly straight (looks like a starfish)
-- MCP joints on a straight line
-- Fingers all the same length
-- Thumb on the same plane as fingers (thumb should be rotated forward)
+- Drawing adult knuckles (too prominent)
+- Drawing 3 crease lines on palm (too old)
+- Nails at the very fingertip edge (adult placement)
+- Fingers too bony or angular
 
 ---
 
-### Fist (dorsal view)
+### Peace Sign / V-Sign ✌️
+
+**Style:** THE classic kawaii pose. Index and middle extended, others curled.
 
 **Description:**
-- Fingers curled tightly into the palm
-- Thumb wraps OVER the middle phalanges of index and middle fingers (thumb rests on top, not inside)
-- MCP knuckles form a prominent arc (middle knuckle most prominent)
-- Extensor tendons visible as ridges on the dorsum
-- The pinky side of the fist is more compressed; the index side is more angled
-- The wrist is usually slightly flexed
+- Index and middle fingers extended upward, spread ~20–30° apart
+- Ring and pinky curled into palm
+- Thumb wraps over the curled ring finger (resting on its middle phalanx)
+- Very soft MCP definition at the base of the extended fingers
 
-**Joint positions:**
-```
-MCP: ~90° flexion
-PIP: ~90° flexion  
-DIP: ~80° flexion
-Thumb CMC: Rotated across palm
-Thumb MCP: ~45° flexion
-```
+**Key manga points:**
+- The extended fingers are deliberately straight with rounded tips
+- Nails are visible on the extended fingers — oval, glossy
+- The curled fingers are simplified: rounded block, no individual finger detail
+- In 3/4 view, the back of the hand shows subtle knuckle bumps
+- Often drawn with the hand slightly tilted (not perfectly vertical)
 
 **Common errors:**
-- Thumb visible from dorsal view (should be hidden by fingers)
-- Thumb placed inside the fist instead of wrapping over
-- Knuckles forming a straight line
-- All finger segments drawn as visible (finger segments overlap)
+- Extended fingers spread too far apart (looks like scissors)
+- Thumb visible from the wrong side
+- Curled fingers drawn individually instead of as a block
 
 ---
 
-### Pointing (index extended, others curled)
+### Heart Finger 💗
+
+**Style:** Thumb and index finger form a heart shape. Very popular in idol/moe poses.
 
 **Description:**
-- Index finger fully extended (or very slightly curved at PIP)
-- Middle, ring, and pinky curl into the palm
-- Thumb wraps over the curled middle finger (rests on the middle phalanx)
-- The index finger MCP is slightly elevated
-- The wrist is usually slightly extended
+- Index finger and thumb tips touch to form the top cleft of the heart
+- Thumb bends at MCP and IP to create the left lobe curve
+- Index bends at PIP to create the right lobe curve
+- Middle, ring, pinky are curled loosely — not tight
+- The heart is formed by the silhouette of the thumb + index finger
 
-**Joint positions:**
-```
-Index: MCP neutral, PIP neutral (or ~10°), DIP neutral
-Middle/Ring/Pinky: MCP ~60°, PIP ~80°, DIP ~60°
-Thumb: Across palm, MCP ~30°
-```
+**Key manga points:**
+- The heart should be soft and rounded, not angular
+- Thumb and index nail are visible — both face forward-ish
+- Often both hands form hearts (one per hand, mirror poses)
+- Background fingers can be suggested with simple curves
 
 **Common errors:**
-- The curled fingers drawn as a flat block instead of layered cylinders
-- Index finger hyperextended backward
-- Thumb not visible in the correct position
-- Middle finger partially visible behind the index
+- Heart looks like a circle (fingers not bent enough)
+- Heart has sharp V at top (not round enough)
+- Background fingers visible and distracting
 
 ---
 
-### Grasping a Cylinder (e.g., cup, handle)
+### Holding a Cup/Phone
+
+**Style:** Both hands cradle a warm drink or phone — common in slice-of-life art.
 
 **Description:**
 - Fingers wrap around the object, following its contour
-- Thumb opposes, wrapping around the other side
-- The palm contacts the object surface; the object sits between the fingers and palm
-- The MCP joints are partially flexed; the PIP and DIP joints follow the object's curvature
-- The thumb wraps to meet or overlap the index and middle fingers
+- Thumb opposes, wrapping around the near side
+- MCP partially flexed, PIP and DIP follow object curvature
+- The object sits between the fingers and palm — palm contacts the surface
 
-**Key rules:**
-- Each finger segment should align with the cylinder's tangent at that point
-- The fingers do NOT all bend at the same angle — each joint adapts to the surface
-- The thumb's plane of opposition is clearly visible
+**Key manga points:**
+- In anime, the cup/phone often becomes the focal point — hands frame it
+- Fingers are drawn with simplified curves, not individual joint segments
+- Each finger segment is a soft taper, joints implied by silhouette not drawn
+- Often shown in 3/4 view — one hand more visible than the other
 
 **Common errors:**
-- Fingers shown as straight hooks instead of following the cylinder's curve
-- Object floating between fingers with no palm contact
-- All fingers bent at identical angles (looks robotic)
-- Thumb not opposing correctly
+- Object floating between fingers, not in contact with palm
+- Fingers all bent at identical angles (robotic)
 
 ---
 
-### Spread Hand (fingers abducted)
+### Fist (Soft)
+
+**Style:** A relaxed fist — not a punch, more like "I'll do my best!" determination pose.
 
 **Description:**
-- All fingers spread apart (abducted at MCP joints)
-- Fingers extended or slightly curved
-- Thumb fully abducted (up to 45-60°)
-- Web spaces clearly visible between all fingers
-- Tension visible in the extensor tendons on the dorsum
+- Fingers curled loosely into palm (not tight)
+- Thumb wraps OVER index and middle — visible from the front
+- MCP knuckles form a soft arc (middle highest)
+- No dorsal tendon definition
 
-**Key points:**
-- Maximum abduction angle between middle and ring is ~25-30°
-- Index and pinky have the most independent abduction range
-- The palm flattens as fingers spread (the concavity decreases)
+**Key manga points:**
+- The fist silhouette is rounded, not angular
+- Knuckles are soft bumps, not sharp peaks
+- The thumb wrapping over should feel loose, not strained
+- In chibi/loli style, the fist sometimes becomes a rounded sphere — but for 14yo, maintain finger distinction
 
 **Common errors:**
-- Fingers spread at equal angles (looks mechanical)
-- Excessive abduction (beyond anatomical range)
-- Flat palm when the natural cup should partially persist
+- Fist too angular/square (boxing glove shape) — belongs to adult/shounen
+- Thumb hidden inside the fist
+- Dorsal tendons drawn as ridges
 
 ---
 
-## 2. Foot Poses
+### Pointing ✨
 
-**Left vs Right:** All descriptions below describe the **right foot**. For the left foot, mirror the x-axis — the big toe stays on the medial (inner) side and the little toe on the lateral (outer) side; the arch is on the inner side regardless of left or right.
-
-### Standing Foot (medial view)
+**Style:** Index finger points at viewer or off-screen. Common in dynamic poses.
 
 **Description:**
-- Full weight on the ground
-- Medial longitudinal arch visible as an upward curve
-- Heel contacting ground at the calcaneal tuberosity
-- Metatarsal heads (ball) contacting ground
-- Toes gripping slightly or relaxed flat
-- Achilles tendon visible as a clear cord from calf to heel
+- Index fully extended with rounded tip
+- Other fingers curled softly
+- Thumb wraps loosely over middle finger
+- Wrist slightly extended
 
-**Key rules:**
-- The arch is NOT at the center of the foot — it's closer to the heel, in the midfoot region
-- The highest point of the foot is roughly above the navicular bone
-- The heel pad is slightly compressed under weight
-- The big toe metatarsal head is the most prominent weight-bearing point
+**Key manga points:**
+- When pointing at viewer, foreshorten the index finger
+- The extended finger should look soft, not like a weapon
+- Curled fingers form a smooth, round background shape
+- Often paired with a wink expression
 
 **Common errors:**
-- Arch placed too far forward (near the toes)
-- Inverted foot — lateral side shown instead of medial
-- No visible arch (flat silhouette)
-- Achilles tendon merged into the leg contour
+- Index finger hyperextended (bending backward)
+- Curled fingers drawn as flat block instead of layered curves
 
 ---
 
-### Standing Foot (dorsal/top view)
+## 2. Foot Poses (Manga)
+
+### Standing (Medial View)
 
 **Description:**
-- Toes fan slightly forward
-- Extensor tendons visible as subtle ridges
-- The dorsal venous network may be visible
-- The metatarsal heads form a subtle curve at the ball
-- The 2nd metatarsal is the longest, creating the most distal point of the forefoot
+- Gentle arch (about half adult height)
+- Heel: small, round contact point
+- Ball: subtle curve under metatarsal heads
+- Toes: soft, rounded, slightly gripping the ground
+- Ankle: smooth contour, inner bump barely visible
 
-**Proportions:**
-```
-Big toe base: widest part of the forefoot
-Toe box: roughly triangular, toes converge toward the tip
-Heel: narrower than the ball
-```
+**Key manga points:**
+- The foot is drawn with 3–4 curves total (dorsal, heel, sole, toe line)
+- Individual toe joints are NEVER drawn — toes are soft bean shapes
+- The arch is indicated by the sole line, not structural shading
 
-**Common errors:**
-- All toes the same length
-- Toes pointing perfectly forward in parallel lines (they should fan slightly)
-- No tendon definition on the dorsum (looks like a shoe)
-
----
-
-### Walking Foot (mid-stance)
+### Standing (Front/3/4 View)
 
 **Description:**
-- The foot is in the process of rolling forward
-- Heel is beginning to lift off the ground
-- The metatarsal heads carry the weight
-- The arch is more pronounced as the foot dorsiflexes
-- The toes begin to extend slightly
-- The ankle is dorsiflexed
+- Toes fan gently, toes 2–5 visible as rounded bumps
+- Big toe is the most prominent
+- Metatarsal heads form a very soft transverse arch
+- The dorsum is smooth with no tendon definition
 
-**Key animation note:**
-During walking, the foot goes through: heel strike → foot flat → mid-stance → heel-off → toe-off. At toe-off, the big toe is the last point of contact.
-
-### Dangling Foot (non-weight-bearing)
+### Tiptoe / Ballet Pose
 
 **Description:**
-- Foot hanging freely (sitting, lying down)
-- Plantarflexed (pointing slightly down) — relaxed position
-- Arch less pronounced (no weight compressing the structure)
-- Toes relaxed, slightly curled
-- The foot naturally angles outward (external rotation at the ankle)
-- The Achilles tendon is relaxed, less prominent
+- Heel maximally elevated
+- Weight on metatarsal heads + toes
+- Arch maximally pronounced (but still soft)
+- Achilles: still minimal visibility
 
-**Key differences from weight-bearing:**
-- The foot appears longer and narrower (no compression)
-- The medial longitudinal arch is lower
-- The ankle appears more mobile
+**Key manga points:**
+- In magical girl transformation poses, toes are pointed
+- The foot stretches to a longer, more elegant shape
+- The big toe is the main visible toe from the side
 
-### Tiptoe (Maximal Plantarflexion)
+### Sitting / Kneeling (Soles Visible)
 
 **Description:**
-- Body weight on the metatarsal heads and toes
-- The heel is maximally elevated
-- The Achilles tendon is taut
-- The arch is maximally pronounced
-- The MTP joints are hyperextended
-- The toes are flexed to grip the ground
+- Foot sole faces viewer or is at an angle
+- Sole pads: round heel pad + round ball pad + toe pads
+- Arch area: soft depression between pads
+- Toes: 5 rounded bean shapes from this angle
 
-**Joint positions:**
-```
-Ankle: ~50° plantarflexion
-MTP: ~70° hyperextension (big toe less than smaller toes)
-Toes: Flexed to provide grip
-```
-
-**Common errors:**
-- Heel not elevated enough (looks like standing flat)
-- Foot shown at an impossible angle
-- No compensation visible in the ankle and calf
+**Key manga points:**
+- This is a "service" pose — soles visible is a deliberate moe element
+- Keep the sole pads clean and simple: heel pad + metatarsal pad + toe pads
+- Toe prints (the circular pad on each toe) are drawn as small ovals
+- Don't over-detail the sole creases — one or two at most
