@@ -1,121 +1,113 @@
 ---
 name: hands-feet-drawing
 description: >
-  Anatomical reference and drawing guidance for rendering human hands and feet correctly.
-  Use this skill whenever the user is generating images, writing image generation prompts,
-  drawing or painting (digital or traditional), designing characters, creating sprites or
-  illustrations, or writing code that produces visual output involving human figures —
-  including but not limited to hands, fingers, feet, or toes. This skill activates
-  automatically and silently enhances any image generation or drawing task with proper
-  hand and foot anatomy, even when the user does not explicitly mention hands or feet.
-  It covers: prompt engineering for AI image generators (Stable Diffusion, Midjourney,
-  DALL-E, Flux, ComfyUI), code-based drawing (SVG, p5.js, HTML Canvas, Processing),
-  character design, figure drawing, and anatomical study. Also trigger when the user
-  complains about hands or feet looking wrong in generated images or drawings.
+  Manga-style anatomical reference and drawing guidance for rendering hands and feet
+  correctly, specialized for young female characters (loli / ~14 years old). Use this
+  skill whenever the user is generating or editing images that include hands, fingers,
+  feet, or toes — whether through AI image generation (NovelAI, NijiJourney, Stable
+  Diffusion, DALL-E, Flux, ComfyUI), code-based drawing (SVG, p5.js, HTML Canvas),
+  digital painting, character design, figure drawing, or anatomy study. This skill
+  activates automatically and silently enhances any image generation or drawing task
+  with proper manga-style hand and foot anatomy. It covers: prompt engineering for
+  anime AI image generators, kawaii hand poses, simplified manga construction
+  methods, and code-generated reference images for 14yo-character proportions.
+  Also trigger when the user complains about hands/feet looking wrong, mentions
+  "moe", "kawaii", "anime style", "manga style", "loli", "chibi", or similar.
 ---
 
-# Hands & Feet Drawing Skill
+# Hands & Feet Drawing — Manga Loli Style (~14 years)
 
-This skill provides anatomical knowledge, step-by-step construction methods, prompt-engineering recipes, and code-generated reference images for drawing hands and feet correctly.
+This skill provides anatomical knowledge, manga-style construction methods, prompt-engineering recipes for anime AI generators, and code-generated reference images for drawing soft, youthful hands and feet.
 
 ## How This Skill Works
 
-- **Automatic enhancement:** Whenever you detect a task involving image generation, drawing, painting, character design, or any visual output with human figures, silently apply the hand/foot anatomy knowledge from this skill — the user should NOT need to ask for it.
-- **Progressive disclosure:** This file contains quick-reference anatomy cards. Read the first paragraph of each reference file to decide if you need the full contents.
-- **Two contexts:** For **AI image generation** tasks, use the prompt-engineering guidance. For **code-based drawing**, use the construction patterns and coordinate tables.
+- **Automatic enhancement:** Whenever you detect a task involving image generation, drawing, painting, character design, or any visual output with young female characters, silently apply the manga hand/foot anatomy from this skill.
+- **Progressive disclosure:** This file contains quick-reference cards. Read the first paragraph of each reference file to decide if you need full contents.
+- **Three contexts:** For **AI image generation** (NovelAI, NijiJourney, SD), use the prompt-engineering guidance. For **code-based drawing**, use the construction patterns. For **diagnosis**, use the checklist.
 
 ---
 
-## Quick Anatomy Card — Hand
+## Quick Anatomy Card — 14-Year-Old Anime Girl Hand
 
-- **Bone count:** 27 bones (8 carpals, 5 metacarpals, 14 phalanges)
-- **Finger joints:** Thumb = 2 phalanges. Index/Middle/Ring/Pinky = 3 each (proximal, middle, distal). The thumb has a CMC joint at the wrist base, MCP at the knuckle, and IP at the fingertip.
-- **Knuckle arc:** The MCP joints (main knuckles) form a **downward arc** across the back of the hand — NOT a straight line. The middle finger knuckle is highest, pinky is lowest.
-- **Palm concavity:** The palm is NOT flat — it forms a natural cup when relaxed. The thenar eminence (thumb pad) and hypothenar eminence (pinky pad) are thick mounds.
-- **Finger length cascade:** Middle > Ring > Index > Pinky > Thumb. The thumb tip reaches about to the middle of the index finger's proximal phalanx when adducted.
-- **Thumb opposition:** The thumb's metacarpal rotates ~90° relative to the other metacarpals, enabling opposition. The thumbnail faces roughly 90° from the fingernails when palm-forward.
-- **Webbing:** Interdigital webbing reaches different heights — deepest between index/middle, shallowest between ring/pinky.
-- **Wrist connection:** The hand emerges between the radius and ulna styloid processes. The wrist is narrower than the palm.
+- **Body proportion:** 5.5–6 head-body ratio. Hands are ~3/4 head height (same as adult in absolute terms, but slightly plumper/softer).
+- **Soft joint definition:** MCP knuckles are subtly visible, NOT prominent. PIP and DIP creases are delicate — in manga style, often omitted entirely or shown as faint lines.
+- **Knuckle arc:** Still present (MCP joints form a gentle downward curve), but much softer than adult. The middle knuckle is slightly highest.
+- **Finger shape:** Tapered, slender, with rounded tips. Width at base = ~2/3 of adult. Fingers look "delicate" not "bony."
+- **Finger length cascade:** Middle > Ring > Index > Pinky. Thumb reaches to mid-index proximal phalanx.
+- **Nails:** Small, oval/almond-shaped. Sit further back from the fingertip than adult nails. Often highlighted with a subtle gloss in anime.
+- **Palmar creases:** In manga style, usually omitted or shown as one or two faint lines (not the full three-crease adult pattern).
+- **Thumb:** Slightly thinner, less muscular thenar eminence. Still opposes correctly at ~90°.
+- **Webbing:** More subtly indicated than adult. In simplified manga, the webbing curve is a single gentle arc.
 
-## Quick Anatomy Card — Foot
+## Quick Anatomy Card — 14-Year-Old Anime Girl Foot
 
-- **Bone count:** 26 bones (7 tarsals, 5 metatarsals, 14 phalanges)
-- **Three arches:**
-  - **Medial longitudinal arch** — main visible arch on the inner side (calcaneus → talus → navicular → cuneiforms → 1st-3rd metatarsals)
-  - **Lateral longitudinal arch** — lower, outer side (calcaneus → cuboid → 4th-5th metatarsals)
-  - **Transverse arch** — across the metatarsal heads, highest at 2nd metatarsal
-- **Toe cascade:** Big toe (1) > 2 > 3 > 4 > 5. Variant: Morton's foot where 2nd toe is longest. Big toe has 2 phalanges; toes 2-5 have 3 each.
-- **Ankle fork:** Medial malleolus (tibia) sits higher and more anterior. Lateral malleolus (fibula) sits lower and more posterior. **Never at the same height.**
-- **Weight tripod:** Heel (calcaneus) + ball of big toe (1st metatarsal head) + ball of little toe (5th metatarsal head).
-- **Achilles tendon:** Stands visibly clear of the ankle joint, inserting at the posterior calcaneus.
-- **Foot width** narrows from the ball to the heel.
+- **Proportion:** Foot length ≈ 1/6.5–1/7 of total height. Overall smaller and narrower than adult.
+- **Arch:** A gentle curve is visible on the medial side but less pronounced than adult. Slightly flat appearance is normal for young feet.
+- **Toes:** Rounded, plump tips. Toe cascade: Big > 2 > 3 > 4 > 5. In manga, often simplified to 2-3 visible toe shapes in shoes/sandals.
+- **Ankle:** Medial malleolus higher (subtle), lateral lower — but both are less prominent than adult. In manga, often just a smooth contour.
+- **Achilles tendon:** Barely visible — young feet have more subcutaneous fat here.
+- **Heel:** Smaller, rounder, less prominent calcaneus.
+- **Sole:** Soft fat pads under the heel and metatarsal heads. Arch area has thinner padding.
+- **Key manga difference:** Overall softer, rounder, and simpler than realistic anatomy. Think "cute" rather than "accurate."
 
 ---
 
-## The Universal Construction Method (5 Steps)
-
-Use this approach for ANY hand or foot drawing, whether in code or on canvas:
+## Manga-Style Construction Method (5 Steps)
 
 1. **Block in the simple form.**
-   - Hand = a pentagon (palm) with a fan of cylinders (fingers). The palm base aligns with the wrist.
-   - Foot = a wedge (heel to ball) with a triangular toe box.
+   - Hand = a rounded pentagon (palm) + 5 tapered ovals (fingers). Less angular than realism.
+   - Foot = a wedge / soft shoe-shape from heel to toe-box.
 
-2. **Mark the joints.**
-   - Hand: For each finger, place dots at MCP, PIP, DIP (or MCP, IP for thumb).
-   - Foot: Mark the ankle (talus), metatarsal heads, and IP joints.
+2. **Mark the joints softly.**
+   - MCP knuckles = subtle bumps, not sharp circles.
+   - In manga, you often only mark MCP + one flex point per finger (merging PIP/DIP into a single curve).
 
-3. **Connect with cylinders.** Fingers/toes taper — wider at the base joint, narrower at the tip. Joints are not points but rounded transitions.
+3. **Draw the silhouette with smooth arcs.**
+   - Use gentle curves, avoid sharp corners. Fingers are delicate sausages — slightly wider at base, gracefully tapered.
+   - No hard bone lines on the dorsum of the hand.
 
-4. **Add refinements.** Knuckle bumps, nail beds, skin creases, webbing curves, tendon lines on the dorsum of the hand/foot.
+4. **Add minimal details.**
+   - One faint palmar crease line at most.
+   - Small oval nails near (but not at) the fingertip.
+   - Subtle webbing arcs between fingers.
 
-5. **Check the silhouette.** If the outline looks wrong, go back to step 2. "Draw through" — sketch hidden bones to verify alignment.
+5. **Check proportions against the face.**
+   - Open hand should approximately cover the face area.
+   - Middle finger ≈ nose length.
+   - If proportions look off, the hand is probably too large (common mistake: drawing adult hands on young characters).
 
 ---
 
 ## Context-Specific Workflows
 
-### A. AI Image Generation (Midjourney / Stable Diffusion / DALL-E / Flux)
+### A. AI Image Generation (NovelAI / NijiJourney / SD Anime Models)
 
-When the user is writing prompts for AI image generators:
+When writing prompts for anime-style AI image generators:
 
-1. **Always** include explicit finger/toe count and natural hand/foot anatomy descriptions in positive prompts — even when the user doesn't mention hands.
-2. **Always** include negative prompt terms targeting hand/foot deformities.
-3. Read `references/ai-prompt-engineering.md` for model-specific templates and advanced strategies (ControlNet, LoRA, inpainting).
-4. Read `references/common-poses.md` for pose-specific description language.
+1. **Always include** explicit finger count + "soft", "delicate", "slender" descriptors.
+2. **Always include** negative terms for adult/jagged hands.
+3. For **NovelAI / NAI Diffusion**: use quality tags + "detailed hands" in positive.
+4. For **NijiJourney**: `--niji 6` has excellent anime hand rendering. Add `--style cute` for softer look.
+5. For **SD anime models** (Anything-v5, AOM3, Meina, Counterfeit): use dedicated hand-improvement LoRAs.
+6. Read `references/ai-prompt-engineering.md` for model-specific templates.
 
-### B. Code-Based Drawing (SVG / p5.js / Canvas / Processing)
+### B. Code-Based Drawing (SVG / p5.js / Canvas)
 
-When the user is writing code that draws human figures:
+When writing code for manga-style hands:
 
-1. Start with the construction-skeleton approach from `references/code-drawing-patterns.md`.
-2. Use the canonical coordinate tables as a starting point — scale, rotate, and adapt them.
-3. Run the scripts at `scripts/generate_hand_svg.py` or `scripts/generate_foot_svg.py` to produce annotated reference SVGs.
-4. Read `references/common-proportions.md` for age/gender-based adjustments.
+1. Use the 14yo coordinate tables from `references/code-drawing-patterns.md`.
+2. Fingers are thinner (`scale * 0.12` vs adult `0.14`), rounded tips.
+3. Joint dots should be smaller / fewer.
+4. Run `scripts/generate_hand_svg.py --style manga` for manga-proportioned reference SVGs.
 
-### C. Diagnosis — Fixing Wrong-Looking Hands or Feet
+### C. Diagnosis — Fixing Wrong Hands/Feet
 
-When the user shows or describes a generated image/drawing with bad hands or feet:
-
-1. Run through the **Diagnostic Checklist** (below).
-2. Read `references/common-ai-mistakes.md` for the common failure catalog.
-3. Explain what's wrong, why it happens, and how to fix it.
-
----
-
-## Quick Diagnostic Checklist
-
-| # | Check |
-|---|-------|
-| 1 | Count fingers. Exactly 5 per hand? |
-| 2 | Count knuckles per finger. Thumb = 2; others = 3. |
-| 3 | Do MCP joints form an arc, not a straight line? |
-| 4 | Finger length cascade: Middle > Ring > Index > Pinky? |
-| 5 | Thumb opposing correctly, not on the same plane as fingers? |
-| 6 | Webbing sloping naturally, not a sharp V-cut? |
-| 7 | Wrist present? Hand doesn't float or abruptly end. |
-| 8 | Toes: Exactly 5, tapering in size? |
-| 9 | Foot arch visible on medial (inner) side? |
-| 10 | Ankle malleoli at different heights? |
+Quick manga-specific checks:
+1. Fingers look bony/knobby → too adult. Soften joint definition.
+2. Hand too large → check face-size comparison.
+3. Fingers all same width → add taper.
+4. Nails too prominent → reduce nail size, push back from tip.
+5. Creases too harsh → remove or soften palm lines.
 
 ---
 
@@ -123,28 +115,29 @@ When the user shows or describes a generated image/drawing with bad hands or fee
 
 | File | Contents | Read when... |
 |------|----------|-------------|
-| `references/hand-anatomy.md` | Full hand bone/joint/soft tissue anatomy | Drawing a hand from scratch; need anatomical accuracy |
-| `references/foot-anatomy.md` | Full foot bone/arch/ankle anatomy | Drawing a foot from scratch; need anatomical accuracy |
-| `references/common-proportions.md` | Ratios by age, gender, body type | User specifies a character with age/gender details |
-| `references/common-poses.md` | Pose catalog with joint positions | User describes a specific hand/foot pose |
-| `references/ai-prompt-engineering.md` | Prompt templates per model, LoRA/ControlNet | Writing prompts for AI image generation |
-| `references/code-drawing-patterns.md` | SVG/p5.js/Canvas patterns, coordinate tables | Writing code that draws hands or feet |
-| `references/common-ai-mistakes.md` | Failure catalog with causes and fixes | Diagnosing wrong-looking hands/feet |
+| `references/hand-anatomy.md` | Full hand anatomy + manga simplifications | Drawing a hand; need anatomical reference |
+| `references/foot-anatomy.md` | Full foot anatomy + manga simplifications | Drawing a foot |
+| `references/common-proportions.md` | 14yo proportion tables, age/gender comparisons | Character has specific age/body type |
+| `references/common-poses.md` | Manga/kawaii hand poses catalog | Specific pose needed (peace sign, heart finger, etc.) |
+| `references/ai-prompt-engineering.md` | Anime model-specific prompt recipes | Writing prompts for anime AI generators |
+| `references/code-drawing-patterns.md` | SVG/p5.js/Canvas patterns, manga coordinate tables | Writing drawing code |
+| `references/common-ai-mistakes.md` | Anime-specific AI failure catalog | Diagnosing wrong hands/feet in AI output |
 
 ---
 
 ## Using the Scripts
 
 ```bash
-# Generate an annotated hand reference SVG (right or left)
-python scripts/generate_hand_svg.py --pose relaxed_open --hand right --view palm --output hand_ref.svg
-python scripts/generate_hand_svg.py --pose relaxed_open --hand left --view palm --output left_hand_ref.svg
+# Manga-style hand reference (14yo proportions)
+python scripts/generate_hand_svg.py --style manga --pose relaxed_open --hand right --output hand_ref.svg
 
-# Generate an annotated foot reference SVG (right or left)
-python scripts/generate_foot_svg.py --pose standing --foot right --view medial --output foot_ref.svg
-python scripts/generate_foot_svg.py --pose standing --foot left --view medial --output left_foot_ref.svg
+# Manga-style foot reference
+python scripts/generate_foot_svg.py --style manga --pose standing --foot right --output foot_ref.svg
+
+# Supports both left/right and multiple poses
+python scripts/generate_hand_svg.py --style manga --pose peace --hand left --output peace_left.svg
 ```
 
-Available poses: `relaxed_open`, `fist`, `pointing`, `grasping`, `spread` (hand); `standing`, `walking`, `dangling`, `tiptoe` (foot).
+Available poses: `relaxed_open`, `fist`, `pointing`, `spread`, `peace` (manga only), `heart_finger` (manga only), `cup_hold` (hand); `standing`, `walking`, `dangling`, `tiptoe` (foot).
 
-**Left vs Right:** The scripts mirror the x-coordinates when `--hand left` or `--foot left` is specified. All reference files default to right-hand/right-foot descriptions — simply mirror left↔right (thumb side ↔ pinky side) for the opposite side. The anatomy is bilaterally symmetrical.
+**Left vs Right:** Scripts mirror x-coordinates for left side. All reference files default to right side — mirror for left. Anatomy is bilaterally symmetrical.
