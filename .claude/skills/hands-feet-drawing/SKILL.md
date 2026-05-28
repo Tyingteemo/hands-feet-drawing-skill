@@ -136,13 +136,15 @@ When the user shows or describes a generated image/drawing with bad hands or fee
 ## Using the Scripts
 
 ```bash
-# Generate an annotated hand reference SVG
+# Generate an annotated hand reference SVG (right or left)
 python scripts/generate_hand_svg.py --pose relaxed_open --hand right --view palm --output hand_ref.svg
+python scripts/generate_hand_svg.py --pose relaxed_open --hand left --view palm --output left_hand_ref.svg
 
-# Generate an annotated foot reference SVG
+# Generate an annotated foot reference SVG (right or left)
 python scripts/generate_foot_svg.py --pose standing --foot right --view medial --output foot_ref.svg
+python scripts/generate_foot_svg.py --pose standing --foot left --view medial --output left_foot_ref.svg
 ```
 
 Available poses: `relaxed_open`, `fist`, `pointing`, `grasping`, `spread` (hand); `standing`, `walking`, `dangling`, `tiptoe` (foot).
 
-Run these scripts whenever you need a visual reference to show the user or to extract coordinate data from.
+**Left vs Right:** The scripts mirror the x-coordinates when `--hand left` or `--foot left` is specified. All reference files default to right-hand/right-foot descriptions — simply mirror left↔right (thumb side ↔ pinky side) for the opposite side. The anatomy is bilaterally symmetrical.
