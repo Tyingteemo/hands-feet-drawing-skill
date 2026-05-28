@@ -8,6 +8,8 @@
 
 ## 1. Hand Poses
 
+**Left vs Right:** All pose joint descriptions below describe the **right hand**. For the left hand, mirror the x-axis — the thumb is on the right side instead of the left, and the pinky is on the left side instead of the right. The joint structure (arc, cascade, angles) is identical.
+
 ### Relaxed Open Hand (palm facing viewer)
 
 **Description:**
@@ -128,6 +130,8 @@ Thumb: Across palm, MCP ~30°
 ---
 
 ## 2. Foot Poses
+
+**Left vs Right:** All descriptions below describe the **right foot**. For the left foot, mirror the x-axis — the big toe stays on the medial (inner) side and the little toe on the lateral (outer) side; the arch is on the inner side regardless of left or right.
 
 ### Standing Foot (medial view)
 
