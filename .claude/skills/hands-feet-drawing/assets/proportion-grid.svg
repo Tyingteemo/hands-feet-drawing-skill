@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ddd" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid-major" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#ccc" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="400" fill="#fafafa"/>
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <rect width="400" height="400" fill="url(#grid-major)"/>
+
+  <!-- Axes -->
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#bbb" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="0" y1="200" x2="400" y2="200" stroke="#bbb" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Center mark -->
+  <circle cx="200" cy="200" r="2" fill="#999"/>
+  <text x="203" y="196" font-family="sans-serif" font-size="8" fill="#999">Origin</text>
+
+  <!-- Major grid labels -->
+  <text x="2" y="105" font-family="sans-serif" font-size="9" fill="#aaa">-1</text>
+  <text x="2" y="205" font-family="sans-serif" font-size="9" fill="#aaa">0</text>
+  <text x="2" y="305" font-family="sans-serif" font-size="9" fill="#aaa">+1</text>
+  <text x="102" y="394" font-family="sans-serif" font-size="9" fill="#aaa">-1</text>
+  <text x="202" y="394" font-family="sans-serif" font-size="9" fill="#aaa">0</text>
+  <text x="302" y="394" font-family="sans-serif" font-size="9" fill="#aaa">+1</text>
+
+  <!-- Title -->
+  <text x="200" y="20" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">
+    Proportion Reference Grid (Unit Scale)
+  </text>
+  <text x="200" y="34" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">
+    1 major unit = 1 head = 100px | Tick spacing = 0.2 units
+  </text>
+
+  <!-- Head unit reference -->
+  <rect x="300" y="50" width="100" height="100" fill="none" stroke="#2980b9" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="350" y="85" font-family="sans-serif" font-size="8" fill="#2980b9" text-anchor="middle">
+    1 Head Unit
+  </text>
+  <text x="350" y="95" font-family="sans-serif" font-size="7" fill="#2980b9" text-anchor="middle">
+    (100px)
+  </text>
+
+  <!-- Hand size reference -->
+  <rect x="300" y="170" width="75" height="100" fill="none" stroke="#e67e22" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="337" y="195" font-family="sans-serif" font-size="8" fill="#e67e22" text-anchor="middle">
+    Hand ≈ 3/4 H
+  </text>
+
+  <!-- Foot size reference -->
+  <rect x="280" y="290" width="100" height="33" fill="none" stroke="#8e44ad" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="330" y="310" font-family="sans-serif" font-size="8" fill="#8e44ad" text-anchor="middle">
+    Foot ≈ 1 H
+  </text>
+
+  <!-- Instructions -->
+  <text x="10" y="370" font-family="sans-serif" font-size="8" fill="#999">
+    Use this grid as a measurement reference. Scale to match your canvas size.
+  </text>
+</svg>
