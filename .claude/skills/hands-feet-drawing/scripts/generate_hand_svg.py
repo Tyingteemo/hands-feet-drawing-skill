@@ -122,19 +122,22 @@ def create_svg(joints, hand_side, view, pose_name, scale=80):
     md_mcp = tx(joints["middle_mcp"])
     rg_mcp = tx(joints["ring_mcp"])
     pk_mcp = tx(joints["pinky_mcp"])
-    wl = (wrist[0] - scale * 0.35, wrist[1])
-    wr = (wrist[0] + scale * 0.35, wrist[1])
+    # Wrist edges: thumb_side / pinky_side (not left/right — depends on hand)
+    th_side = th_cmc[0]  # thumb-side wrist x
+    pk_side = pk_mcp[0]  # pinky-side wrist x
+    w_thumb = (wrist[0] + (th_side - wrist[0]) * 0.3, wrist[1])
+    w_pinky = (wrist[0] + (pk_side - wrist[0]) * 0.3, wrist[1])
 
-    # Palm silhouette
+    # Palm silhouette — order: thumb → thumb-side wrist → pinky-side wrist → pinky → knuckles → thumb
     nudge = scale * 0.06
     nudge_sm = scale * 0.04
     pd = (
         f"M {th_cmc[0]},{th_cmc[1]}"
-        f" C {th_cmc[0]-nudge},{th_cmc[1]+nudge} {wl[0]},{wl[1]+nudge} {wl[0]},{wl[1]}"
-        f" L {wr[0]},{wr[1]}"
-        f" C {wr[0]},{wr[1]+nudge} {pk_mcp[0]+nudge},{pk_mcp[1]+nudge} {pk_mcp[0]},{pk_mcp[1]}"
+        f" C {th_cmc[0]},{th_cmc[1]+nudge} {w_thumb[0]},{w_thumb[1]+nudge} {w_thumb[0]},{w_thumb[1]}"
+        f" L {w_pinky[0]},{w_pinky[1]}"
+        f" C {w_pinky[0]},{w_pinky[1]+nudge} {pk_mcp[0]},{pk_mcp[1]+nudge} {pk_mcp[0]},{pk_mcp[1]}"
         f" L {rg_mcp[0]},{rg_mcp[1]} L {md_mcp[0]},{md_mcp[1]} L {ix_mcp[0]},{ix_mcp[1]}"
-        f" C {ix_mcp[0]-nudge},{ix_mcp[1]-nudge_sm} {th_mcp[0]-nudge_sm},{th_mcp[1]-nudge_sm} {th_cmc[0]},{th_cmc[1]} Z"
+        f" C {ix_mcp[0]},{ix_mcp[1]-nudge_sm} {th_mcp[0]},{th_mcp[1]-nudge_sm} {th_cmc[0]},{th_cmc[1]} Z"
     )
     s(svg, "path", "silhouette", d=pd)
 
