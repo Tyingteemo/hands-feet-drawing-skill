@@ -310,6 +310,8 @@ function drawFinger(ctx, mcp, pip, dip, tip, width) {
 | DIP | 0.42 | 2.0 | Fingertip joint |
 | Tip | 0.38 | 2.25 | Fingertip |
 
+**Left Hand Mirroring:** Flip all x-coordinates (multiply by -1). Thumb_CMC becomes (0.7, 0.4), index_MCP becomes (0.35, 1.3), etc. The y-coordinates stay the same.
+
 ### Right Foot (Standing, Medial View, Unit Scale)
 
 | Point | x | y | Notes |
@@ -326,6 +328,8 @@ function drawFinger(ctx, mcp, pip, dip, tip, width) {
 | Big toe tip | 2.4 | 0.3 | |
 | 2nd MT head | 1.9 | 0.1 | |
 | 5th MT head | 1.6 | 0.1 | Ball of little toe (ground contact) |
+
+**Left Foot Mirroring:** The left foot is anatomically symmetrical to the right foot. The medial arch is on the inner side of BOTH feet. For a left foot medial view, the toes point left instead of right — mirror the x-coordinates. For code, multiply all x by -1. |
 
 ---
 
